@@ -7,12 +7,56 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
     <TextView
+            android:text="ePages"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-
+            android:layout_height="wrap_content" android:id="@+id/textView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.13"
+            android:textColor="#000000" android:textColorHighlight="#F61A1A" android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF" android:textStyle="bold" android:textSize="75"/>
+    <TextView
+            android:text="The best platform to connect users with their local small businesses."
+            android:layout_width="343dp"
+            android:layout_height="100dp" android:id="@+id/textView2"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2" android:textSize="25"
+            tools:visibility="visible" android:visibility="visible" app:layout_constraintHorizontal_bias="0.5"/>
+    <TextView
+            android:text="Already have an account? Log in below."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/haveAcct"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintHorizontal_bias="0.034" app:layout_constraintVertical_bias="0.167"
+            android:textColor="#000000" android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textSize="20"/>
+    <TextView
+            android:text="Or, sign up!"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/haveAcct2"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@+id/haveAcct"
+            app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.371"
+            android:textColor="#000000" android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textSize="20"/>
+    <Button
+            android:text="Sign up"
+            android:layout_width="270dp"
+            android:layout_height="84dp" android:id="@+id/signup"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/haveAcct2"
+            app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.0"
+            android:textAllCaps="true" app:backgroundTint="#3F51B5" android:background="#87FF00" android:textSize="25"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    <Button
+            android:text="Login"
+            android:layout_width="270dp"
+            android:layout_height="84dp" android:id="@+id/login2"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/haveAcct" app:layout_constraintBottom_toTopOf="@+id/haveAcct2"
+            app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.0"
+            android:textAllCaps="true" app:backgroundTint="#3F51B5" android:background="#87FF00" android:textSize="25"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
