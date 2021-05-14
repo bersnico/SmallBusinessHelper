@@ -7,56 +7,59 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
     <TextView
-            android:text="ePages"
+            android:text="@string/epages"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/textView"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.13"
             android:textColor="#000000" android:textColorHighlight="#F61A1A" android:textColorHint="#FFFFFF"
-            android:textColorLink="#FFFFFF" android:textStyle="bold" android:textSize="75"/>
+            android:textColorLink="#FFFFFF" android:textStyle="bold" android:textSize="70sp"
+            android:fontFamily="@font/fenix"/>
     <TextView
-            android:text="The best platform to connect users with their local small businesses."
+            android:text="@string/the_best_platform_to_connect_users_with_their_local_small_businesses"
             android:layout_width="343dp"
             android:layout_height="100dp" android:id="@+id/textView2"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintVertical_bias="0.0"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body2" android:textSize="25"
-            tools:visibility="visible" android:visibility="visible" app:layout_constraintHorizontal_bias="0.5"/>
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2" android:textSize="25sp"
+            tools:visibility="visible" android:visibility="visible" app:layout_constraintHorizontal_bias="0.5"
+            android:fontFamily="@font/fenix" android:gravity="center"/>
     <TextView
-            android:text="Already have an account? Log in below."
+            android:text="@string/already_have_an_account_log_in_below"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/haveAcct"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@+id/textView2"
-            app:layout_constraintHorizontal_bias="0.034" app:layout_constraintVertical_bias="0.167"
+            app:layout_constraintVertical_bias="0.163"
             android:textColor="#000000" android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-            android:textSize="20"/>
+            android:textSize="20sp" android:fontFamily="@font/fenix"/>
     <TextView
-            android:text="Or, sign up!"
+            android:text="@string/or_sign_up"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/haveAcct2"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@+id/haveAcct"
-            app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.371"
+            app:layout_constraintVertical_bias="0.371"
             android:textColor="#000000" android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-            android:textSize="20"/>
+            android:textSize="20sp" android:fontFamily="@font/fenix"/>
     <Button
-            android:text="Sign up"
+            android:text="@string/sign_up"
             android:layout_width="270dp"
             android:layout_height="84dp" android:id="@+id/signup"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/haveAcct2"
-            app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.0"
-            android:textAllCaps="true" app:backgroundTint="#3F51B5" android:background="#87FF00" android:textSize="25"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintHorizontal_bias="0.496" app:layout_constraintVertical_bias="0.125"
+            android:textAllCaps="true" app:backgroundTint="#3F51B5" android:background="#87FF00" android:textSize="36sp"
+            app:layout_constraintBottom_toBottomOf="parent" android:fontFamily="@font/fenix"/>
     <Button
-            android:text="Login"
+            android:text="@string/login"
             android:layout_width="270dp"
             android:layout_height="84dp" android:id="@+id/login2"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/haveAcct" app:layout_constraintBottom_toTopOf="@+id/haveAcct2"
-            app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.0"
-            android:textAllCaps="true" app:backgroundTint="#3F51B5" android:background="#87FF00" android:textSize="25"/>
+            app:layout_constraintHorizontal_bias="0.496" app:layout_constraintVertical_bias="0.45"
+            android:textAllCaps="true" app:backgroundTint="#3F51B5" android:background="#87FF00" android:textSize="36sp"
+            android:fontFamily="@font/fenix"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

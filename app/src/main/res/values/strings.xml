@@ -8,4 +8,11 @@
     <string name="enter_phone_number">Enter Phone Number</string>
     <string name="enter_business_address">Enter Business Address</string>
     <string name="enter_business_name">Enter Business Name</string>
+    <string name="epages">ePages</string>
+    <string name="the_best_platform_to_connect_users_with_their_local_small_businesses">The best platform to connect
+        users with their local small businesses.
+    </string>
+    <string name="or_sign_up">Or, sign up!</string>
+    <string name="login">Login</string>
+    <string name="already_have_an_account_log_in_below">Already have an account? Log in below.</string>
 </resources>
