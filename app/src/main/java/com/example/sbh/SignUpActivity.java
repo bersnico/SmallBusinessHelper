@@ -1,10 +1,8 @@
 package com.example.sbh;
 
+import android.content.Intent;
 import android.view.View;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
-import android.widget.EditText;
-import android.widget.RadioButton;
+import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -33,6 +31,14 @@ public class SignUpActivity extends AppCompatActivity {
                     editTextBusinessName.setVisibility(View.VISIBLE);
                     editTextPostalAddress.setVisibility(View.VISIBLE);
                 }
+            }
+        });
+        Button signUpButton = findViewById(R.id.signUpButton);
+        signUpButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent startIntent = new Intent(getApplicationContext(), HomeScreen.class);
+                startActivity(startIntent);
             }
         });
     }
