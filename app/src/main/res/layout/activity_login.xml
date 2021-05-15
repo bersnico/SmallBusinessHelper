@@ -9,13 +9,14 @@
 
     <TextView
             android:text="@string/login"
-            android:layout_width="88dp"
-            android:layout_height="47dp" android:id="@+id/textView3"
+            android:layout_width="127dp"
+            android:layout_height="50dp" android:id="@+id/textView3"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintVertical_bias="0.094"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" android:fontFamily="monospace"
-            android:textStyle="bold" android:fadingEdge="horizontal|vertical"/>
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" android:fontFamily="@font/fenix"
+            android:textStyle="bold" android:fadingEdge="horizontal|vertical" android:gravity="center"
+            android:textSize="36sp"/>
     <EditText
             android:layout_width="327dp"
             android:layout_height="45dp"
@@ -28,7 +29,7 @@
             android:autofillHints=""
             app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress"
             app:layout_constraintVertical_bias="0.041" android:cursorVisible="true"
-            android:fadingEdge="horizontal|vertical" android:background="#36594B4B"/>
+            android:fadingEdge="horizontal|vertical" android:background="#36594B4B" android:fontFamily="@font/fenix"/>
     <EditText
             android:layout_width="329dp"
             android:layout_height="55dp"
@@ -40,7 +41,7 @@
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.25"
             android:hint="@string/enter_email" android:cursorVisible="true" android:fadingEdge="horizontal|vertical"
             android:background="#36594B4B" app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintHorizontal_bias="0.513"/>
+            app:layout_constraintHorizontal_bias="0.513" android:fontFamily="@font/fenix"/>
     <Button
             android:text="@string/login"
             android:layout_width="188dp"
@@ -49,5 +50,6 @@
             android:textSize="24sp"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.253"/>
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.253"
+            android:fontFamily="@font/fenix"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,9 +15,9 @@
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintVertical_bias="0.094"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" android:fontFamily="monospace"
-            android:textStyle="bold" android:fadingEdge="horizontal|vertical"/>
+            android:textStyle="bold" android:fadingEdge="horizontal|vertical" android:gravity="center"/>
     <EditText
-            android:layout_width="327dp"
+            android:layout_width="300dp"
             android:layout_height="45dp"
             android:inputType="textPassword"
             android:ems="10"
@@ -30,7 +30,7 @@
             app:layout_constraintVertical_bias="0.041" android:cursorVisible="true"
             android:fadingEdge="horizontal|vertical" android:background="#36594B4B"/>
     <EditText
-            android:layout_width="329dp"
+            android:layout_width="300dp"
             android:layout_height="46dp"
             android:inputType="textPassword"
             android:ems="10"
@@ -41,7 +41,7 @@
             android:hint="@string/reenter_password" android:autofillHints="" android:cursorVisible="true"
             android:fadingEdge="horizontal|vertical" android:background="#36594B4B"/>
     <EditText
-            android:layout_width="340dp"
+            android:layout_width="300dp"
             android:layout_height="57dp"
             android:ems="10"
             android:id="@+id/editTextBusinessName"
@@ -53,7 +53,7 @@
             app:layout_constraintHorizontal_bias="0.492" android:cursorVisible="true"
             android:fadingEdge="horizontal|vertical" android:visibility="invisible" android:background="#36594B4B"/>
     <EditText
-            android:layout_width="329dp"
+            android:layout_width="300dp"
             android:layout_height="55dp"
             android:inputType="textEmailAddress"
             android:ems="10"
@@ -65,7 +65,7 @@
             android:background="#36594B4B"/>
     <CheckBox
             android:text="@string/select_if_business_account"
-            android:layout_width="330dp"
+            android:layout_width="300dp"
             android:layout_height="43dp" android:id="@+id/checkBox"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -74,7 +74,7 @@
             app:buttonTint="#4C91AB" android:textColor="#46869E"
             android:fadingEdge="horizontal|vertical" android:background="#36594B4B"/>
     <EditText
-            android:layout_width="338dp"
+            android:layout_width="300dp"
             android:layout_height="45dp"
             android:inputType="phone"
             android:ems="10"
@@ -85,8 +85,8 @@
             android:autofillHints="" android:cursorVisible="true" android:fadingEdge="horizontal|vertical"
             android:visibility="invisible" android:background="#36594B4B"/>
     <EditText
-            android:layout_width="329dp"
-            android:layout_height="44dp"
+            android:layout_width="300dp"
+            android:layout_height="49dp"
             android:inputType="textPostalAddress"
             android:ems="10"
             android:id="@+id/editTextTextPostalAddress"
