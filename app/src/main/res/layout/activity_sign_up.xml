@@ -5,7 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".SignUpActivity" android:background="#7703A9F4">
+        tools:context=".SignUpActivity" android:background="#7703A9F4" android:id="@+id/signUp">
 
     <TextView
             android:text="@string/sign_up"
@@ -15,7 +15,7 @@
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintVertical_bias="0.094"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" android:fontFamily="monospace"
-            android:textStyle="bold"  android:fadingEdge="horizontal|vertical"/>
+            android:textStyle="bold" android:fadingEdge="horizontal|vertical"/>
     <EditText
             android:layout_width="327dp"
             android:layout_height="45dp"
