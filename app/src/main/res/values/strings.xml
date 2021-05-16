@@ -16,4 +16,6 @@
     <string name="login">Login</string>
     <string name="already_have_an_account_log_in_below">Already have an account? Log in below.</string>
     <string name="home">Home</string>
+    <string name="noMatch">Make sure the passwords match!</string>
+    <string name="minChars">Must be a minimum of 8 characters</string>
 </resources>
