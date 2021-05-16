@@ -1,31 +1,46 @@
 package com.example.sbh;
 
 
-public class BusinessAccount extends Account {
+public class BusinessAccount extends Account{
 
-	protected String category, email, phoneNumber, businessName, priceRange;
-	public BusinessAccount(String userName, String password, String location, String phoneNumber, String nameOfBusiness) {
-		super(userName, password, location);
-		this.businessName=nameOfBusiness;
+	private String category, email, phoneNumber, businessName;
+	private int priceRange;
+
+	public BusinessAccount(String nameOfBusiness, String email, String password, String address, String phoneNumber, String category, int priceRange) {
+		super(nameOfBusiness, password, address);
+		this.priceRange=priceRange;
+		isBusiness = true;
+		this.category=category;
+		this.email=email;
+		businessName=nameOfBusiness;
 		this.phoneNumber=phoneNumber;
 
+		String temp = phoneNumber.substring(0, 3);
+		this.phoneNumber = "(" + temp + ")";
+		temp = phoneNumber.substring(3, 6);
+		this.phoneNumber = this.phoneNumber + " " + temp;
+		temp = phoneNumber.substring(6);
+		this.phoneNumber = this.phoneNumber + "-" + temp;
+
 	}
 
-	public String getUserType () {
-		return "business";
+	public String getName() {
+		return businessName;
 	}
+
 	public String getCategory() {
 		return category;
 	}
-	public void setPriceRange(String priceRange){
-		this.priceRange=priceRange;
-	}
-	public void setCategory(String category){
-		this.category=category;
-	}
-	public String getEmail() {
-		return email ;
-	}
-	public String getPhoneNumber(){return phoneNumber; }
 
+	public int getPriceRange() {
+		return priceRange;
+	}
+
+	public String getNumber() {
+		return phoneNumber;
+	}
+
+	public String getEmail() {
+		return email;
+	}
 }

@@ -55,7 +55,7 @@ public class SignUpActivity extends AppCompatActivity {
                         String phoneNum = phone.getText().toString();
                         EditText business = findViewById(R.id.editTextBusinessName);
                         String nameOfBusi = business.getText().toString();
-                        accounts.add(new BusinessAccount(email, initPword, address, phoneNum, nameOfBusi));
+                        accounts.add(new BusinessAccount(nameOfBusi, email, initPword, address, phoneNum, /*category, priceRange*/);
                         Intent startIntent = new Intent(getApplicationContext(), HomeScreen.class);
                         startActivity(startIntent);
                     }
