@@ -18,4 +18,6 @@
     <string name="home">Home</string>
     <string name="noMatch">Make sure the passwords match!</string>
     <string name="minChars">Must be a minimum of 8 characters</string>
+    <string name="your_account">Your Account</string>
+    <string name="emailDisplay">Email:</string>
 </resources>
