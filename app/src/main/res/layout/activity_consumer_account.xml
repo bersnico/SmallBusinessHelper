@@ -5,22 +5,77 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ConsumerAccountActivity" android:background="#7A03A9F4">
-    <TextView
-            android:text="@string/emailDisplay"
-            android:layout_width="107dp"
-            android:layout_height="36dp" android:id="@+id/textView9"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="0.157" android:textSize="24sp"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0.133"/>
-    <TextView
-            android:text="@string/your_account"
-            android:layout_width="221dp"
-            android:layout_height="42dp" android:id="@+id/textView8"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.152" app:layout_constraintVertical_bias="0.04"
-            android:textSize="36sp" android:fontFamily="@font/fenix" android:textColor="#131212"
-            android:textStyle="bold"/>
+        tools:context=".ConsumerAccountActivity">
+    <Button
+            android:text="@string/log_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/button4" tools:layout_editor_absoluteY="16dp"
+            tools:layout_editor_absoluteX="296dp"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".BusinessAccountActivity" android:background="#7A03A9F4">
+
+        <TextView
+                android:text="@string/contact_info"
+                android:layout_width="107dp"
+                android:layout_height="36dp" android:id="@+id/textView7"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.588" android:textSize="24sp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="160dp"/>
+        <TextView
+                android:text="@string/name"
+                android:layout_width="107dp"
+                android:layout_height="36dp" android:id="@+id/textView6"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.588" android:textSize="24sp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="96dp"/>
+        <TextView
+                android:text="@string/location"
+                android:layout_width="107dp"
+                android:layout_height="36dp" android:id="@+id/textView15"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.052" android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="396dp"/>
+        <TextView
+                android:text="@string/price"
+                android:layout_width="107dp"
+                android:layout_height="36dp" android:id="@+id/textView11"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.052" android:textSize="24sp"
+                tools:layout_editor_absoluteY="238dp"/>
+        <TextView
+                android:text="@string/your_account"
+                android:layout_width="221dp"
+                android:layout_height="42dp" android:id="@+id/textView5"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.084" app:layout_constraintVertical_bias="0.023"
+                android:textSize="36sp" android:fontFamily="@font/fenix" android:textColor="#131212"
+                android:textStyle="bold"/>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" tools:src="@tools:sample/avatars" android:id="@+id/imageView"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="84dp" app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="519dp" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="16dp" android:layout_marginStart="16dp" android:layout_marginEnd="267dp"
+                android:layout_marginRight="267dp" app:layout_constraintEnd_toEndOf="parent"/>
+        <Button
+                android:text="@string/edit_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/button" tools:layout_editor_absoluteY="667dp"
+                tools:layout_editor_absoluteX="145dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" tools:src="@tools:sample/avatars" android:id="@+id/imageView5"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="84dp" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="519dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="16dp" android:layout_marginStart="16dp" android:layout_marginEnd="267dp"
+            android:layout_marginRight="267dp" app:layout_constraintEnd_toEndOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
