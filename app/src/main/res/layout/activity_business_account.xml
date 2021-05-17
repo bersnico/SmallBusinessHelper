@@ -104,6 +104,26 @@
     <Button
             android:text="@string/log_out"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/button2" tools:layout_editor_absoluteY="16dp"
-            tools:layout_editor_absoluteX="296dp"/>
+            android:layout_height="wrap_content" android:id="@+id/button2"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="16dp" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="667dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="296dp" android:layout_marginStart="296dp" android:layout_marginEnd="25dp"
+            android:layout_marginRight="25dp" app:layout_constraintEnd_toEndOf="parent"/>
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" tools:layout_editor_absoluteY="390dp"
+            tools:layout_editor_absoluteX="174dp" android:id="@+id/scrollView2">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="vertical"/>
+    </ScrollView>
+    <ScrollView
+            android:layout_width="416dp"
+            android:layout_height="154dp"
+            android:id="@+id/scrollPhotos" app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="504dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="73dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="vertical"/>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
