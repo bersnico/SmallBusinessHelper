@@ -19,7 +19,9 @@ public class SignUpActivity extends AppCompatActivity {
         CheckBox checkBox = findViewById(R.id.checkBox);
         EditText editTextPhone = findViewById(R.id.editTextPhone);
         EditText editTextPostalAddress = findViewById(R.id.editTextTextPostalAddress);
-        EditText editTextBusinessName = findViewById(R.id.editTextBusinessName);
+        EditText editTextBusinessName = findViewById(R.id.editTextBusinessName2);
+        EditText cat = findViewById(R.id.editTextCategory);
+        EditText price = findViewById(R.id.editTextPriceRange);
         checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -28,11 +30,15 @@ public class SignUpActivity extends AppCompatActivity {
                     editTextPhone.setVisibility(View.GONE);
                     editTextBusinessName.setVisibility(View.GONE);
                     editTextPostalAddress.setVisibility(View.GONE);
+                    cat.setVisibility(View.GONE);
+                    price.setVisibility(View.GONE);
                 }
                 else{
                     editTextPhone.setVisibility(View.VISIBLE);
                     editTextBusinessName.setVisibility(View.VISIBLE);
                     editTextPostalAddress.setVisibility(View.VISIBLE);
+                    cat.setVisibility(View.VISIBLE);
+                    price.setVisibility(View.VISIBLE);
                 }
             }
         });
@@ -53,9 +59,13 @@ public class SignUpActivity extends AppCompatActivity {
                     if (checkBox.isChecked()) {
                         EditText phone = findViewById(R.id.editTextPhone);
                         String phoneNum = phone.getText().toString();
-                        EditText business = findViewById(R.id.editTextBusinessName);
+                        EditText business = findViewById(R.id.editTextCategory);
                         String nameOfBusi = business.getText().toString();
-                        accounts.add(new BusinessAccount(nameOfBusi, email, initPword, address, phoneNum, /*category, priceRange*/);
+                        EditText cat = findViewById(R.id.editTextCategory);
+                        String category = cat.getText().toString();
+                        EditText price = findViewById(R.id.editTextPriceRange);
+                        int priceRange = Integer.parseInt(price.getText().toString());
+                        accounts.add(new BusinessAccount(nameOfBusi, email, initPword, address, phoneNum, category, priceRange));
                         Intent startIntent = new Intent(getApplicationContext(), HomeScreen.class);
                         startActivity(startIntent);
                     }

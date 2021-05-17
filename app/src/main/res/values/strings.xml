@@ -20,4 +20,10 @@
     <string name="minChars">Must be a minimum of 8 characters</string>
     <string name="your_account">Your Account</string>
     <string name="emailDisplay">Email:</string>
+    <string name="enter_a_category">Enter a category</string>
+    <string name="enter_price_range_1_4">Enter Price Range(1-4)</string>
+    <string name="location">Location</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="favorites">Favorites</string>
+    <string name="price">Price</string>
 </resources>

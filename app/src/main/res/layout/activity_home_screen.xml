@@ -7,16 +7,6 @@
         android:layout_height="match_parent"
         tools:context=".HomeScreen" android:background="#7703A9F4">
 
-    <androidx.core.widget.NestedScrollView
-            android:layout_width="380dp"
-            android:layout_height="273dp" android:fillViewport="true"
-            android:id="@+id/resultDisplay" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.516"
-            app:layout_constraintVertical_bias="0.975" android:verticalScrollbarPosition="right">
-        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                      android:orientation="vertical"/>
-    </androidx.core.widget.NestedScrollView>
     <TextView
             android:text="@string/home"
             android:layout_width="194dp"
@@ -35,8 +25,10 @@
             android:layout_width="380dp"
             android:layout_height="273dp" android:fillViewport="true"
             android:id="@+id/favoritesDisplay"
-            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="284dp"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.483"
+            app:layout_constraintVertical_bias="0.401">
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
                       android:orientation="vertical" android:verticalScrollbarPosition="right"/>
     </androidx.core.widget.NestedScrollView>

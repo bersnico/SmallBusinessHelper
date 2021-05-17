@@ -16,21 +16,21 @@
             android:id="@+id/editTextTextPersonName2" tools:layout_editor_absoluteY="164dp"
             tools:layout_editor_absoluteX="164dp" android:textSize="24sp"/>
     <TextView
-            android:text="Favorites"
+            android:text="@string/favorites"
             android:layout_width="107dp"
             android:layout_height="36dp" android:id="@+id/textView14"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.042" android:textSize="24sp"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0.424"/>
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.838" app:layout_constraintBottom_toTopOf="@+id/textView12"/>
     <TextView
-            android:text="Price"
+            android:text="@string/price"
             android:layout_width="107dp"
             android:layout_height="36dp" android:id="@+id/textView11"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.042" android:textSize="24sp"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0.499"/>
+            app:layout_constraintVertical_bias="0.459" app:layout_constraintBottom_toTopOf="@+id/textView12"
+            app:layout_constraintTop_toBottomOf="@+id/textView14"/>
     <TextView
             android:text="Category"
             android:layout_width="107dp"
@@ -38,15 +38,15 @@
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.042" android:textSize="24sp"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0.583"/>
+            app:layout_constraintVertical_bias="0.612"/>
     <TextView
-            android:text="Location"
+            android:text="@string/location"
             android:layout_width="107dp"
             android:layout_height="36dp" android:id="@+id/textView15"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="0.042" android:textSize="24sp"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0.664"/>
+            app:layout_constraintHorizontal_bias="0.052" android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.072" app:layout_constraintTop_toBottomOf="@+id/textView12"/>
     <TextView
             android:text="@string/your_account"
             android:layout_width="221dp"
@@ -58,17 +58,20 @@
             android:textStyle="bold"/>
     <RatingBar
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/ratingBar" tools:layout_editor_absoluteY="247dp"
-            tools:layout_editor_absoluteX="16dp"/>
+            android:layout_height="wrap_content" android:id="@+id/ratingBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintVertical_bias="0.367"/>
     <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" tools:src="@tools:sample/avatars" android:id="@+id/imageView"
             tools:layout_editor_absoluteY="84dp" tools:layout_editor_absoluteX="16dp"/>
     <Button
-            android:text="Edit Profile"
+            android:text="@string/edit_profile"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/button" tools:layout_editor_absoluteY="733dp"
-            tools:layout_editor_absoluteX="22dp"/>
+            android:layout_height="wrap_content" android:id="@+id/button" tools:layout_editor_absoluteY="646dp"
+            tools:layout_editor_absoluteX="145dp"/>
     <EditText
             android:layout_width="173dp"
             android:layout_height="48dp"
