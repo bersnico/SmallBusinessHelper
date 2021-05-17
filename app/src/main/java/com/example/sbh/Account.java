@@ -5,14 +5,15 @@ import java.util.ArrayList;
 public class Account {
 
 	protected static ArrayList<Account> accounts;
-	protected String userName, password, address;
+	protected int idNum;
+	protected String email, password, address;
 	protected boolean isBusiness;
 
-	public Account(String userName, String password, String address) {
-		this.userName=userName;
+	public Account(String email, String password, String address, int idNum) {
+		this.email=email;
 		this.password=password;
 		this.address=address;
-
+		this.idNum = idNum;
 		accounts = new ArrayList<Account>();
 		accounts.add(this);
 	}
@@ -25,8 +26,8 @@ public class Account {
 		return password;
 	}
 
-	public String getUserName() {
-		return userName;
+	public String getEmail() {
+		return email;
 	}
 
 	public String getLocation() {

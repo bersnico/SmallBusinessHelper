@@ -6,8 +6,8 @@ public class BusinessAccount extends Account{
 	private String category, email, phoneNumber, businessName;
 	private int priceRange;
 
-	public BusinessAccount(String nameOfBusiness, String email, String password, String address, String phoneNumber, String category, int priceRange) {
-		super(nameOfBusiness, password, address);
+	public BusinessAccount(String nameOfBusiness, String email, String password, String address, String phoneNumber, String category, int priceRange, int iD) {
+		super(nameOfBusiness, password, address, iD);
 		this.priceRange=priceRange;
 		isBusiness = true;
 		this.category=category;

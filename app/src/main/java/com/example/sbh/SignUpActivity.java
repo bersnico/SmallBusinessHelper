@@ -10,6 +10,7 @@ import java.util.ArrayList;
 
 public class SignUpActivity extends AppCompatActivity {
     private static int checkCount = 0;
+    public static int idCounter = 0;
     private ArrayList<Account> accounts = new ArrayList<Account>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +56,10 @@ public class SignUpActivity extends AppCompatActivity {
                 String reentered = doubleCheck.getText().toString();
                 EditText loc = findViewById(R.id.editTextTextPostalAddress);
                 String address = loc.getText().toString();
+                for (int i=0; i<accounts.size(); i++){
+                    if (accounts.get(i).getEmail().equals(email))
+                        emailText.setHint("This email is already registered.");
+                }
                 if(initPword.equals(reentered) && initPword.length()>7) {
                     if (checkBox.isChecked()) {
                         EditText phone = findViewById(R.id.editTextPhone);
@@ -65,12 +70,14 @@ public class SignUpActivity extends AppCompatActivity {
                         String category = cat.getText().toString();
                         EditText price = findViewById(R.id.editTextPriceRange);
                         int priceRange = Integer.parseInt(price.getText().toString());
-                        accounts.add(new BusinessAccount(nameOfBusi, email, initPword, address, phoneNum, category, priceRange));
+                        accounts.add(new BusinessAccount(nameOfBusi, email, initPword, address, phoneNum, category, priceRange, idCounter));
+                        idCounter++;
                         Intent startIntent = new Intent(getApplicationContext(), HomeScreen.class);
                         startActivity(startIntent);
                     }
                     else {
-                        accounts.add(new ConsumerAccount(email, initPword, address));
+                        accounts.add(new ConsumerAccount(email, initPword, address, idCounter));
+                        idCounter++;
                         Intent startIntent = new Intent(getApplicationContext(), HomeScreen.class);
                         startActivity(startIntent);
                     }

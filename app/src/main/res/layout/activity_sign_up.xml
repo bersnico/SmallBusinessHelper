@@ -133,4 +133,12 @@
             app:layout_constraintBottom_toBottomOf="parent" android:textSize="24sp"
             app:layout_constraintHorizontal_bias="0.497" app:layout_constraintVertical_bias="0.774"
             android:fontFamily="@font/fenix"/>
+    <TextView
+            android:text="Make sure all fields have a valid entry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/fillInAll"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="4dp" app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress" android:fontFamily="@font/fenix"
+            android:textColor="#FF0000" android:visibility="invisible"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
