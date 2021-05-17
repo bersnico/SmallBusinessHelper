@@ -14,7 +14,9 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/Theme.SBH">
-        <activity android:name=".AccountActivity">
+        <activity android:name=".ConsumerAccountActivity">
+        </activity>
+        <activity android:name=".BusinessAccountActivity">
         </activity>
         <activity android:name=".MapsActivity">
         </activity>
