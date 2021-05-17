@@ -7,14 +7,12 @@
         android:layout_height="match_parent"
         tools:context=".BusinessAccountActivity" android:background="#7A03A9F4">
 
-    <EditText
-            android:layout_width="173dp"
-            android:layout_height="48dp"
-            android:inputType="textPersonName"
-            android:text="Contact Info"
-            android:ems="10"
-            android:id="@+id/editTextTextPersonName2" tools:layout_editor_absoluteY="164dp"
-            tools:layout_editor_absoluteX="164dp" android:textSize="24sp"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="165dp"
+            android:layout_height="41dp" android:id="@+id/textView7" tools:layout_editor_absoluteY="159dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.666"/>
     <TextView
             android:text="@string/favorites"
             android:layout_width="107dp"
@@ -72,12 +70,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/button" tools:layout_editor_absoluteY="646dp"
             tools:layout_editor_absoluteX="145dp"/>
-    <EditText
-            android:layout_width="173dp"
-            android:layout_height="48dp"
-            android:inputType="textPersonName"
-            android:text="Business Name"
-            android:ems="10"
-            android:id="@+id/editTextTextPersonName" tools:layout_editor_absoluteY="93dp"
-            tools:layout_editor_absoluteX="164dp" android:textSize="24sp"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="165dp"
+            android:layout_height="41dp" android:id="@+id/textView6" tools:layout_editor_absoluteY="84dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.666"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
