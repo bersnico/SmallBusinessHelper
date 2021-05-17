@@ -29,4 +29,6 @@
     <string name="category">Category</string>
     <string name="business_name">Business Name</string>
     <string name="contact_info">Contact Info</string>
+    <string name="name">Name</string>
+    <string name="log_out">Log Out</string>
 </resources>

@@ -30,13 +30,21 @@
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.042" android:textSize="24sp"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.823" app:layout_constraintBottom_toTopOf="@+id/textView12"/>
+            app:layout_constraintVertical_bias="0.828" app:layout_constraintBottom_toTopOf="@+id/textView12"/>
+    <TextView
+            android:text="@string/category"
+            android:layout_width="107dp"
+            android:layout_height="36dp" android:id="@+id/textView12"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.042" android:textSize="24sp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.588"/>
     <TextView
             android:text="@string/location"
             android:layout_width="107dp"
             android:layout_height="36dp" android:id="@+id/textView15"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="0.051" android:textSize="24sp"
+            app:layout_constraintHorizontal_bias="0.052" android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintVertical_bias="0.064" app:layout_constraintTop_toBottomOf="@+id/textView12"/>
     <TextView
@@ -45,16 +53,8 @@
             android:layout_height="36dp" android:id="@+id/textView11"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.042" android:textSize="24sp"
-            app:layout_constraintVertical_bias="0.515" app:layout_constraintBottom_toTopOf="@+id/textView12"
+            app:layout_constraintVertical_bias="0.464" app:layout_constraintBottom_toTopOf="@+id/textView12"
             app:layout_constraintTop_toBottomOf="@+id/textView14"/>
-    <TextView
-            android:text="@string/category"
-            android:layout_width="107dp"
-            android:layout_height="36dp" android:id="@+id/textView12"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="0.042" android:textSize="24sp"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0.568"/>
     <TextView
             android:text="@string/your_account"
             android:layout_width="221dp"
@@ -78,14 +78,19 @@
     <Button
             android:text="@string/edit_profile"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/button" tools:layout_editor_absoluteY="646dp"
+            android:layout_height="wrap_content" android:id="@+id/button" tools:layout_editor_absoluteY="667dp"
             tools:layout_editor_absoluteX="145dp"/>
     <ImageView
             android:layout_width="169dp"
             android:layout_height="213dp" tools:srcCompat="@tools:sample/backgrounds/scenic"
-            android:id="@+id/imageView4" tools:layout_editor_absoluteY="473dp" tools:layout_editor_absoluteX="217dp"/>
+            android:id="@+id/imageView2" tools:layout_editor_absoluteY="473dp" tools:layout_editor_absoluteX="16dp"/>
     <ImageView
             android:layout_width="169dp"
             android:layout_height="213dp" tools:srcCompat="@tools:sample/backgrounds/scenic"
-            android:id="@+id/imageView5" tools:layout_editor_absoluteY="473dp" tools:layout_editor_absoluteX="26dp"/>
+            android:id="@+id/imageView4" tools:layout_editor_absoluteY="473dp" tools:layout_editor_absoluteX="217dp"/>
+    <Button
+            android:text="@string/log_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/button2" tools:layout_editor_absoluteY="16dp"
+            tools:layout_editor_absoluteX="296dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
