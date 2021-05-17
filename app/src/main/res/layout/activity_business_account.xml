@@ -7,14 +7,22 @@
         android:layout_height="match_parent"
         tools:context=".BusinessAccountActivity" android:background="#7A03A9F4">
 
-    <EditText
-            android:layout_width="173dp"
-            android:layout_height="48dp"
-            android:inputType="textPersonName"
-            android:text="Contact Info"
-            android:ems="10"
-            android:id="@+id/editTextTextPersonName2" tools:layout_editor_absoluteY="164dp"
-            tools:layout_editor_absoluteX="164dp" android:textSize="24sp"/>
+    <TextView
+            android:text="@string/contact_info"
+            android:layout_width="107dp"
+            android:layout_height="36dp" android:id="@+id/textView7"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.585" android:textSize="24sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.43" app:layout_constraintBottom_toTopOf="@+id/textView12"/>
+    <TextView
+            android:text="@string/business_name"
+            android:layout_width="107dp"
+            android:layout_height="36dp" android:id="@+id/textView6"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.585" android:textSize="24sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.238" app:layout_constraintBottom_toTopOf="@+id/textView12"/>
     <TextView
             android:text="@string/favorites"
             android:layout_width="107dp"
@@ -22,31 +30,31 @@
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.042" android:textSize="24sp"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.838" app:layout_constraintBottom_toTopOf="@+id/textView12"/>
+            app:layout_constraintVertical_bias="0.823" app:layout_constraintBottom_toTopOf="@+id/textView12"/>
+    <TextView
+            android:text="@string/location"
+            android:layout_width="107dp"
+            android:layout_height="36dp" android:id="@+id/textView15"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.051" android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.064" app:layout_constraintTop_toBottomOf="@+id/textView12"/>
     <TextView
             android:text="@string/price"
             android:layout_width="107dp"
             android:layout_height="36dp" android:id="@+id/textView11"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.042" android:textSize="24sp"
-            app:layout_constraintVertical_bias="0.459" app:layout_constraintBottom_toTopOf="@+id/textView12"
+            app:layout_constraintVertical_bias="0.515" app:layout_constraintBottom_toTopOf="@+id/textView12"
             app:layout_constraintTop_toBottomOf="@+id/textView14"/>
     <TextView
-            android:text="Category"
+            android:text="@string/category"
             android:layout_width="107dp"
             android:layout_height="36dp" android:id="@+id/textView12"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.042" android:textSize="24sp"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0.612"/>
-    <TextView
-            android:text="@string/location"
-            android:layout_width="107dp"
-            android:layout_height="36dp" android:id="@+id/textView15"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="0.052" android:textSize="24sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0.072" app:layout_constraintTop_toBottomOf="@+id/textView12"/>
+            app:layout_constraintVertical_bias="0.568"/>
     <TextView
             android:text="@string/your_account"
             android:layout_width="221dp"
@@ -62,7 +70,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintVertical_bias="0.367"/>
+            app:layout_constraintVertical_bias="0.342"/>
     <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" tools:src="@tools:sample/avatars" android:id="@+id/imageView"
@@ -72,12 +80,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/button" tools:layout_editor_absoluteY="646dp"
             tools:layout_editor_absoluteX="145dp"/>
-    <EditText
-            android:layout_width="173dp"
-            android:layout_height="48dp"
-            android:inputType="textPersonName"
-            android:text="Business Name"
-            android:ems="10"
-            android:id="@+id/editTextTextPersonName" tools:layout_editor_absoluteY="93dp"
-            tools:layout_editor_absoluteX="164dp" android:textSize="24sp"/>
+    <ImageView
+            android:layout_width="169dp"
+            android:layout_height="213dp" tools:srcCompat="@tools:sample/backgrounds/scenic"
+            android:id="@+id/imageView4" tools:layout_editor_absoluteY="473dp" tools:layout_editor_absoluteX="217dp"/>
+    <ImageView
+            android:layout_width="169dp"
+            android:layout_height="213dp" tools:srcCompat="@tools:sample/backgrounds/scenic"
+            android:id="@+id/imageView5" tools:layout_editor_absoluteY="473dp" tools:layout_editor_absoluteX="26dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
