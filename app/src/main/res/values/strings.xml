@@ -33,4 +33,12 @@
     <string name="log_out">Log Out</string>
     <string name="make_sure_all_fields_have_a_valid_entry">Make sure all fields have a valid entry</string>
     <string name="enter_town">Enter Town</string>
+    <string name="todo1">TODO</string>
+    <string name="todo2">TODO</string>
+    <string name="todo3">TODO</string>
+    <string name="profilepic">profilepic</string>
+    <string name="uploaded1">uploaded1</string>
+    <string name="uploaded2">uploaded2</string>
+    <string name="profilepic2">profilepic2</string>
+    <string name="todo">TODO</string>
 </resources>
