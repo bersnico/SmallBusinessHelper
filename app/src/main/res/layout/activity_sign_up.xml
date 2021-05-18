@@ -27,7 +27,7 @@
             android:id="@+id/editTextBusinessName2"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPostalAddress"
+            app:layout_constraintTop_toBottomOf="@+id/editTextPhone"
             app:layout_constraintVertical_bias="0.049"
             android:hint="@string/enter_business_name" android:autofillHints="" android:inputType="textPersonName"
             app:layout_constraintHorizontal_bias="0.495" android:cursorVisible="true"
@@ -96,8 +96,8 @@
             android:layout_height="43dp" android:id="@+id/checkBox"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2"
-            app:layout_constraintVertical_bias="0.032" app:layout_constraintHorizontal_bias="0.525"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPostalAddress"
+            app:layout_constraintVertical_bias="0.038" app:layout_constraintHorizontal_bias="0.504"
             app:buttonTint="#4C91AB" android:textColor="#46869E"
             android:fadingEdge="horizontal|vertical" android:background="#36594B4B" android:fontFamily="@font/fenix"/>
     <EditText
@@ -120,10 +120,10 @@
             android:id="@+id/editTextTextPostalAddress"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextPhone" app:layout_constraintVertical_bias="0.044"
-            android:hint="@string/enter_business_address" android:autofillHints="" android:cursorVisible="true"
-            android:fadingEdge="horizontal|vertical" android:visibility="invisible" android:background="#36594B4B"
-            app:layout_constraintHorizontal_bias="0.495" android:fontFamily="@font/fenix"/>
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" app:layout_constraintVertical_bias="0.037"
+            android:hint="@string/enter_town" android:autofillHints="" android:cursorVisible="true"
+            android:fadingEdge="horizontal|vertical" android:visibility="visible" android:background="#36594B4B"
+            app:layout_constraintHorizontal_bias="0.504" android:fontFamily="@font/fenix"/>
     <Button
             android:text="@string/sign_up"
             android:layout_width="188dp"
@@ -134,7 +134,7 @@
             app:layout_constraintHorizontal_bias="0.497" app:layout_constraintVertical_bias="0.774"
             android:fontFamily="@font/fenix"/>
     <TextView
-            android:text="Make sure all fields have a valid entry"
+            android:text="@string/make_sure_all_fields_have_a_valid_entry"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/fillInAll"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
