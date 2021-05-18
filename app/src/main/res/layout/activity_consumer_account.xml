@@ -18,7 +18,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context=".BusinessAccountActivity" android:background="#7A03A9F4">
+            tools:context=".BusinessAccountActivity" android:background="#7A03A9F4" android:id="@+id/logout2">
 
         <TextView
                 android:text="@string/contact_info"
