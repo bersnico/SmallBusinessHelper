@@ -55,11 +55,31 @@ public class SignUpActivity extends AppCompatActivity {
                 EditText doubleCheck = findViewById(R.id.editTextTextPassword2);
                 String reentered = doubleCheck.getText().toString();
                 EditText loc = findViewById(R.id.editTextTextPostalAddress);
-                String address = loc.getText().toString();
+                String town = loc.getText().toString();
                 for (int i=0; i<accounts.size(); i++){
-                    if (accounts.get(i).getEmail().equals(email))
+                    if (accounts.get(i).getEmail().equals(email)) {
                         emailText.setHint("This email is already registered.");
+                        String original = email;
+                        while (email.equals(original)){
+                            email = emailText.getText().toString();
+                        }
+                        i = -1;
+                    }
                 }
+
+                if(email.equals("") || initPword.equals("") || reentered.equals("") || town.equals("")){
+                    TextView error = findViewById(R.id.fillInAll);
+                    error.setVisibility(View.VISIBLE);
+                    while (email.equals("") || initPword.equals("") ||reentered.equals("") ||town.equals("")){
+                        email = emailText.getText().toString();
+                        initPword = origPword.getText().toString();
+                        reentered = doubleCheck.getText().toString();
+                        town = loc.getText().toString();
+
+                    }
+                    error.setVisibility(View.INVISIBLE);
+                }
+
                 if(initPword.equals(reentered) && initPword.length()>7) {
                     if (checkBox.isChecked()) {
                         EditText phone = findViewById(R.id.editTextPhone);
@@ -70,13 +90,25 @@ public class SignUpActivity extends AppCompatActivity {
                         String category = cat.getText().toString();
                         EditText price = findViewById(R.id.editTextPriceRange);
                         int priceRange = Integer.parseInt(price.getText().toString());
-                        accounts.add(new BusinessAccount(nameOfBusi, email, initPword, address, phoneNum, category, priceRange, idCounter));
+                        accounts.add(new BusinessAccount(nameOfBusi, email, initPword, town, phoneNum, category, priceRange, idCounter));
                         idCounter++;
+
+                        if(phoneNum.equals("") || nameOfBusi.equals("")){
+                            TextView error = findViewById(R.id.fillInAll);
+                            error.setVisibility(View.VISIBLE);
+                            while (phoneNum.equals("") || nameOfBusi.equals("")){
+                                phoneNum = phone.getText().toString();
+                                nameOfBusi = business.getText().toString();
+
+
+                            }
+                        }
+
                         Intent startIntent = new Intent(getApplicationContext(), HomeScreen.class);
                         startActivity(startIntent);
                     }
                     else {
-                        accounts.add(new ConsumerAccount(email, initPword, address, idCounter));
+                        accounts.add(new ConsumerAccount(email, initPword, town, idCounter));
                         idCounter++;
                         Intent startIntent = new Intent(getApplicationContext(), HomeScreen.class);
                         startActivity(startIntent);
