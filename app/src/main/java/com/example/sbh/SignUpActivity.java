@@ -67,24 +67,24 @@ public class SignUpActivity extends AppCompatActivity {
                     }
                 }
 
-                if(email.equals("") || initPword.equals("") || reentered.equals("") || town.equals("")){
+                if(email.equals("") || initPword.equals("") || reentered.equals("") || town.equals("") || isValidEmail(email)){
                     TextView error = findViewById(R.id.fillInAll);
                     error.setVisibility(View.VISIBLE);
-                    while (email.equals("") || initPword.equals("") ||reentered.equals("") ||town.equals("")){
+                    while (email.equals("") || initPword.equals("") ||reentered.equals("") ||town.equals("") || !isValidEmail(email)){
                         email = emailText.getText().toString();
                         initPword = origPword.getText().toString();
                         reentered = doubleCheck.getText().toString();
                         town = loc.getText().toString();
 
                     }
-                    error.setVisibility(View.INVISIBLE);
+                    error.setVisibility(View.GONE);
                 }
 
                 if(initPword.equals(reentered) && initPword.length()>7) {
                     if (checkBox.isChecked()) {
                         EditText phone = findViewById(R.id.editTextPhone);
                         String phoneNum = phone.getText().toString();
-                        EditText business = findViewById(R.id.editTextCategory);
+                        EditText business = findViewById(R.id.editTextBusinessName2);
                         String nameOfBusi = business.getText().toString();
                         EditText cat = findViewById(R.id.editTextCategory);
                         String category = cat.getText().toString();
@@ -99,9 +99,8 @@ public class SignUpActivity extends AppCompatActivity {
                             while (phoneNum.equals("") || nameOfBusi.equals("")){
                                 phoneNum = phone.getText().toString();
                                 nameOfBusi = business.getText().toString();
-
-
                             }
+                            error.setVisibility(View.GONE);
                         }
 
                         Intent startIntent = new Intent(getApplicationContext(), HomeScreen.class);
@@ -125,5 +124,9 @@ public class SignUpActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+    public static boolean isValidEmail(CharSequence target) {
+        boolean isValid = target != null && android.util.Patterns.EMAIL_ADDRESS.matcher(target).matches();
+        return isValid;
     }
 }
