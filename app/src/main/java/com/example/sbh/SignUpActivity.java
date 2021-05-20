@@ -125,8 +125,5 @@ public class SignUpActivity extends AppCompatActivity {
             }
         });
     }
-    public static boolean isValidEmail(CharSequence target) {
-        boolean isValid = target != null && android.util.Patterns.EMAIL_ADDRESS.matcher(target).matches();
-        return isValid;
-    }
+  
 }
