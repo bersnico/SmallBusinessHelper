@@ -41,4 +41,9 @@
     <string name="uploaded2">uploaded2</string>
     <string name="profilepic2">profilepic2</string>
     <string name="todo">TODO</string>
+    <string name="apply_changes">Apply Changes</string>
+    <string name="cancel">Cancel</string>
+    <string name="phone">Phone</string>
+    <string name="enter_new_business_name">Enter New Business Name</string>
+    <string name="update_this">Update This</string>
 </resources>
