@@ -7,4 +7,89 @@
         android:layout_height="match_parent"
         tools:context=".ConsumerAccountEditActivity">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="446dp"
+            android:layout_height="786dp"
+            tools:context=".BusinessAccountActivity" android:background="#7A03A9F4" android:id="@+id/logout2"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent">
+
+        <EditText
+                android:layout_width="202dp"
+                android:layout_height="50dp"
+                android:inputType="textEmailAddress"
+                android:ems="10"
+                android:id="@+id/changeLocation"
+                android:textSize="24sp"
+                app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="280dp"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="17dp"
+                android:layout_marginStart="17dp" android:layout_marginEnd="192dp" android:layout_marginRight="192dp"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.514"
+                tools:hint="Update Location" tools:inputType="text"/>
+        <TextView
+                android:text="@string/your_account"
+                android:layout_width="221dp"
+                android:layout_height="42dp" android:id="@+id/textView5"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.084" app:layout_constraintVertical_bias="0.023"
+                android:textSize="36sp" android:fontFamily="@font/fenix" android:textColor="#131212"
+                android:textStyle="bold"/>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" tools:src="@tools:sample/avatars" android:id="@+id/imageView"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="84dp" app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="519dp" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="16dp" android:layout_marginStart="16dp" android:layout_marginEnd="267dp"
+                android:layout_marginRight="267dp" app:layout_constraintEnd_toEndOf="parent"
+                android:contentDescription="@string/todo"/>
+        <Button
+                android:text="@string/apply_edits"
+                android:layout_height="wrap_content" android:id="@+id/apply"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="706dp" app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="32dp" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="297dp" android:layout_marginStart="297dp" android:layout_marginEnd="31dp"
+                android:layout_marginRight="31dp" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="wrap_content"/>
+        <EditText
+                android:layout_width="202dp"
+                android:layout_height="55dp"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/changeName"
+                android:textSize="24sp" app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="83dp" app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="593dp" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="179dp" android:layout_marginStart="179dp" android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp" app:layout_constraintEnd_toEndOf="parent" tools:hint="Update Name"
+                tools:inputType="textPersonName"/>
+        <EditText
+                android:layout_width="202dp"
+                android:layout_height="50dp"
+                android:inputType="textEmailAddress"
+                android:ems="10"
+                android:id="@+id/changePassword"
+                android:textSize="24sp"
+                app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="163dp"
+                app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="518dp"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="179dp"
+                android:layout_marginStart="179dp" android:layout_marginEnd="30dp" android:layout_marginRight="30dp"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.514"
+                app:layout_constraintVertical_bias="0.345" tools:hint="Update Password" tools:inputType="textPassword"/>
+        <Button
+                android:text="@string/cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/cancel"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="706dp" app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="32dp" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="35dp" android:layout_marginStart="35dp" android:layout_marginEnd="323dp"
+                android:layout_marginRight="323dp" app:layout_constraintEnd_toEndOf="parent"/>
+        <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content" android:id="@+id/guideline2"
+                                                    app:layout_constraintGuide_begin="20dp"
+                                                    android:orientation="vertical"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

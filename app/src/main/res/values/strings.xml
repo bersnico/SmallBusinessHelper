@@ -41,4 +41,10 @@
     <string name="uploaded2">uploaded2</string>
     <string name="profilepic2">profilepic2</string>
     <string name="todo">TODO</string>
+    <string name="apply_edits">Apply Edits</string>
+    <string name="location">Location</string>
+    <string name="name">Name</string>
+    <string name="contact">Contact</string>
+    <string name="price">Price</string>
+    <string name="cancel">Cancel</string>
 </resources>
