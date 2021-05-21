@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class SignUpActivity extends AppCompatActivity {
     private static int checkCount = 0;
     public static int idCounter = 0;
-    private ArrayList<Account> accounts = new ArrayList<Account>();
+    public ArrayList<Account> accounts = new ArrayList<Account>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,55 +56,37 @@ public class SignUpActivity extends AppCompatActivity {
                 String reentered = doubleCheck.getText().toString();
                 EditText loc = findViewById(R.id.editTextTextPostalAddress);
                 String town = loc.getText().toString();
-                for (int i=0; i<accounts.size(); i++){
-                    if (accounts.get(i).getEmail().equals(email)) {
-                        emailText.setHint("This email is already registered.");
-                        String original = email;
-                        while (email.equals(original)){
-                            email = emailText.getText().toString();
-                        }
-                        i = -1;
-                    }
-                }
 
-                if(email.equals("") || initPword.equals("") || reentered.equals("") || town.equals("") || isValidEmail(email)){
-                    TextView error = findViewById(R.id.fillInAll);
+                if(email.equals("") || initPword.equals("") || reentered.equals("") || town.equals("")){
+
+                    TextView error = findViewById(R.id.checkAll);
                     error.setVisibility(View.VISIBLE);
-                    while (email.equals("") || initPword.equals("") ||reentered.equals("") ||town.equals("") || !isValidEmail(email)){
-                        email = emailText.getText().toString();
-                        initPword = origPword.getText().toString();
-                        reentered = doubleCheck.getText().toString();
-                        town = loc.getText().toString();
 
-                    }
-                    error.setVisibility(View.GONE);
                 }
 
-                if(initPword.equals(reentered) && initPword.length()>7) {
+                if(initPword.equals(reentered) && initPword.length()>7 && !email.equals("") && !town.equals("")) {
                     if (checkBox.isChecked()) {
                         EditText phone = findViewById(R.id.editTextPhone);
                         String phoneNum = phone.getText().toString();
-                        EditText business = findViewById(R.id.editTextBusinessName2);
+                        EditText business = findViewById(R.id.editTextCategory);
                         String nameOfBusi = business.getText().toString();
                         EditText cat = findViewById(R.id.editTextCategory);
                         String category = cat.getText().toString();
                         EditText price = findViewById(R.id.editTextPriceRange);
                         int priceRange = Integer.parseInt(price.getText().toString());
-                        accounts.add(new BusinessAccount(nameOfBusi, email, initPword, town, phoneNum, category, priceRange, idCounter));
-                        idCounter++;
 
-                        if(phoneNum.equals("") || nameOfBusi.equals("")){
-                            TextView error = findViewById(R.id.fillInAll);
-                            error.setVisibility(View.VISIBLE);
-                            while (phoneNum.equals("") || nameOfBusi.equals("")){
-                                phoneNum = phone.getText().toString();
-                                nameOfBusi = business.getText().toString();
-                            }
-                            error.setVisibility(View.GONE);
-                        }
+                       // if(!phoneNum.equals("") && !nameOfBusi.equals("")){
 
-                        Intent startIntent = new Intent(getApplicationContext(), HomeScreen.class);
-                        startActivity(startIntent);
+                            accounts.add(new BusinessAccount(nameOfBusi, email, initPword, town, phoneNum, category, priceRange, idCounter));
+                            idCounter++;
+
+                            Intent startIntent = new Intent(getApplicationContext(), HomeScreen.class);
+                            startActivity(startIntent);
+//                        } else {
+//                            TextView error = findViewById(R.id.checkAll);
+//                            error.setVisibility(View.VISIBLE);
+//                        }
+
                     }
                     else {
                         accounts.add(new ConsumerAccount(email, initPword, town, idCounter));
@@ -114,16 +96,20 @@ public class SignUpActivity extends AppCompatActivity {
                     }
                 }
                 else{
-                    doubleCheck.setText("");
                     if(initPword.length()<8){
+                        doubleCheck.setText("");
                         doubleCheck.setHint(R.string.minChars);
                     }
-                    else {
+                    else if (!initPword.equals(reentered)){
+                        doubleCheck.setText("");
                         doubleCheck.setHint(R.string.noMatch);
                     }
                 }
             }
         });
     }
-  
 }
+//    public static boolean isValidEmail(CharSequence target) {
+//        boolean isValid = target != null && android.util.Patterns.EMAIL_ADDRESS.matcher(target).matches();
+//        return isValid;
+//    }
