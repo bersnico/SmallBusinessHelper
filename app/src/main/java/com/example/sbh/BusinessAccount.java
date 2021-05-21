@@ -27,6 +27,13 @@ public class BusinessAccount extends Account{
 	public String getName() {
 		return businessName;
 	}
+	public void setCategory(String category){
+		this.category=category;
+	}
+	public void setBusinessName(String B){
+		this.category=category;
+	}
+
 
 	public String getCategory() {
 		return category;
