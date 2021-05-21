@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class SignUpActivity extends AppCompatActivity {
     private static int checkCount = 0;
     public static int idCounter = 0;
-    private ArrayList<Account> accounts = new ArrayList<Account>();
+    public ArrayList<Account> accounts = new ArrayList<Account>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
