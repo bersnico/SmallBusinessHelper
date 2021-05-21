@@ -32,8 +32,6 @@ public class Account {
 		}
 	}
 
-
-
 	public boolean getUserType () {
 		return isBusiness;
 	}
@@ -46,9 +44,11 @@ public class Account {
 		return email;
 	}
 
-	public String getLocation() {
-		return address;
+	public String getLocation() { return address; }
 
-	}
+	public String setPassword() { return password; }
+
+	public String setLocation() { return address; }
+
 
 }
