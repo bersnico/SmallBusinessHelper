@@ -17,7 +17,6 @@
         <EditText
                 android:layout_width="202dp"
                 android:layout_height="50dp"
-                android:inputType="textEmailAddress"
                 android:ems="10"
                 android:id="@+id/changeLocation"
                 android:textSize="24sp"
@@ -25,7 +24,7 @@
                 app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="17dp"
                 android:layout_marginStart="17dp" android:layout_marginEnd="192dp" android:layout_marginRight="192dp"
                 app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.514"
-                tools:hint="Update Location" tools:inputType="text"/>
+                tools:hint="Update Location" tools:inputType="text" android:autofillHints="" android:inputType="text"/>
         <TextView
                 android:text="@string/your_account"
                 android:layout_width="221dp"
@@ -64,11 +63,11 @@
                 android:layout_marginBottom="593dp" app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginLeft="179dp" android:layout_marginStart="179dp" android:layout_marginEnd="30dp"
                 android:layout_marginRight="30dp" app:layout_constraintEnd_toEndOf="parent" tools:hint="Update Name"
-                tools:inputType="textPersonName"/>
+                tools:inputType="textPersonName" android:autofillHints=""/>
         <EditText
                 android:layout_width="202dp"
                 android:layout_height="50dp"
-                android:inputType="textEmailAddress"
+                android:inputType="text|textPassword"
                 android:ems="10"
                 android:id="@+id/changePassword"
                 android:textSize="24sp"
@@ -77,7 +76,8 @@
                 app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="179dp"
                 android:layout_marginStart="179dp" android:layout_marginEnd="30dp" android:layout_marginRight="30dp"
                 app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.514"
-                app:layout_constraintVertical_bias="0.345" tools:hint="Update Password" tools:inputType="textPassword"/>
+                app:layout_constraintVertical_bias="0.345" tools:hint="Update Password" tools:inputType="textPassword"
+                android:autofillHints=""/>
         <Button
                 android:text="@string/cancel"
                 android:layout_width="wrap_content"
