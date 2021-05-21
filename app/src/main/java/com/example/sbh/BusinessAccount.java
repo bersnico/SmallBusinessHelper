@@ -27,13 +27,6 @@ public class BusinessAccount extends Account{
 	public String getName() {
 		return businessName;
 	}
-	public void setCategory(String category){
-		this.category=category;
-	}
-	public void setBusinessName(String B){
-		this.category=category;
-	}
-
 
 	public String getCategory() {
 		return category;
@@ -52,6 +45,23 @@ public class BusinessAccount extends Account{
 	}
 
 //mutator methods
+	public void setName(String newName) {
+	businessName = newName;
+}
+	public void setCategory(String newCategory) {
+		category = newCategory;
+	}
 
+	public void setPriceRange(int newPrice) {
+		priceRange = newPrice;
+	}
+
+	public String setNumber() {
+		return phoneNumber;
+	}
+
+	public String setEmail() {
+		return email;
+	}
 
 }
