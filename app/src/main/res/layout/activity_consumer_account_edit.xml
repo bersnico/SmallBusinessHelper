@@ -53,18 +53,6 @@
                 android:layout_width="wrap_content" android:text="@string/apply_edits"/>
         <EditText
                 android:layout_width="202dp"
-                android:layout_height="55dp"
-                android:inputType="textPersonName"
-                android:ems="10"
-                android:id="@+id/changeName"
-                android:textSize="24sp" app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginTop="83dp" app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginBottom="593dp" app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginLeft="179dp" android:layout_marginStart="179dp" android:layout_marginEnd="30dp"
-                android:layout_marginRight="30dp" app:layout_constraintEnd_toEndOf="parent"
-                tools:inputType="textPersonName" android:autofillHints="" android:hint="@string/update_name2"/>
-        <EditText
-                android:layout_width="202dp"
                 android:layout_height="50dp"
                 android:inputType="text|textPassword"
                 android:ems="10"

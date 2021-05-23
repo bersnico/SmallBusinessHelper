@@ -27,17 +27,21 @@ public class ConsumerAccountEditActivity extends AppCompatActivity {
         apply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent startIntent = new Intent(getApplicationContext(), ConsumerAccountActivity.class);
-                startActivity(startIntent);
+
+                EditText nPassword = findViewById(R.id.changePassword);
+                String newPassword = nPassword.getText().toString();
+                EditText nLocation = findViewById(R.id.changeLocation);
+                String newLocation = nLocation.getText().toString();
+
+                if(checkFilled(newPassword, newLocation)) {
+                    setPassword(newPassword);
+                    setAddress(newLocation);
+                }
             }
         });
 
-        EditText changeName = findViewById(R.id.changeName);
-        String newName = changeName.getText().toString();
-        EditText changePassword = findViewById(R.id.changePassword);
-        String newPassword = changePassword.getText().toString();
-        EditText changeLocation = findViewById(R.id.changeLocation);
-        String newLocation = changeLocation.getText().toString();
+
+
 
 
 
