@@ -7,6 +7,8 @@ import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
+import static com.example.sbh.BusinessAccountEditActivity.checkFilled;
+
 public class ConsumerAccountEditActivity extends AppCompatActivity {
 
     @Override
@@ -34,21 +36,15 @@ public class ConsumerAccountEditActivity extends AppCompatActivity {
                 String newLocation = nLocation.getText().toString();
 
                 if(checkFilled(newPassword, newLocation)) {
-                    setPassword(newPassword);
-                    setAddress(newLocation);
+                    LoginActivity.currentAcc.setPassword(newPassword);
+
                 }
             }
         });
 
 
-
-
-
-
-
-
-
-
-
+    }
+    public static boolean checkFilled(String newP, String newL) {
+        return !newP.equals("") && !newL.equals("");
     }
 }
