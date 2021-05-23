@@ -46,9 +46,10 @@ public class Account {
 
 	public String getLocation() { return address; }
 
-	public String setPassword() { return password; }
+	//mutator methods
+	public void setPassword(String newPassword) { password = newPassword; }
 
-	public String setLocation() { return address; }
+	public void setLocation(String newAddress) { address = newAddress; }
 
 
 }

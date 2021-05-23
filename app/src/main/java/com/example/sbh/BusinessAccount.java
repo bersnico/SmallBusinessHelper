@@ -56,12 +56,10 @@ public class BusinessAccount extends Account{
 		priceRange = newPrice;
 	}
 
-	public String setNumber() {
-		return phoneNumber;
+	public void setNumber(String newNumber) {
+		phoneNumber = newNumber;
 	}
 
-	public String setEmail() {
-		return email;
-	}
+
 
 }
