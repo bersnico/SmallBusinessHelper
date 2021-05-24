@@ -34,9 +34,13 @@ public class BusinessAccount extends Account{
 	public void setBusinessName(String B){
 		this.businessName=B;
 	}
+
+	public void setPhoneNumber(String nNumber){ phoneNumber = nNumber; }
 	public boolean getUserType(){
 		return isBusiness;
 	}
+
+	public void setPriceRange(int nPrice){ priceRange = nPrice; }
 
 	public String getCategory() {
 		return category;

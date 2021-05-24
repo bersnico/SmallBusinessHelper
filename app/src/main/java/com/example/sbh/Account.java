@@ -50,4 +50,8 @@ public class Account {
 		return address;
 	}
 
+	public void setLocation(String nAddress){ address = nAddress; }
+
+	public void setPassword(String nPassword){ password = nPassword; }
+
 }
