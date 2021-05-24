@@ -96,5 +96,10 @@
                 android:layout_marginLeft="217dp" android:layout_marginStart="217dp" android:layout_marginEnd="25dp"
                 android:layout_marginRight="25dp" app:layout_constraintEnd_toEndOf="parent"
                 android:contentDescription="@string/uploaded2"/>
+        <Button
+                android:text="@string/return_to_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/button" tools:layout_editor_absoluteY="667dp"
+                tools:layout_editor_absoluteX="123dp"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
