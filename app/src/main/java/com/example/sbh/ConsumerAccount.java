@@ -6,8 +6,10 @@ public class ConsumerAccount extends Account{
 
 	private ArrayList<BusinessAccount> favs;
 
+
 	public ConsumerAccount(String email, String password, String location, int iD) {
 		super(email, password, location, iD);
+
 		isBusiness = false;
 	}
 

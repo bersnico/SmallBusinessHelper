@@ -30,7 +30,7 @@ public class BusinessAccountEditActivity extends AppCompatActivity {
                 EditText newCat = findViewById(R.id.editCat);
                 String newCate =newCat.getText().toString();
                 if(checkFilled(newB, newNum, newLoc, newP, newCate)){
-                    LoginActivity.currentAcc.set
+                    LoginActivity.currentAcc.setLocation(newLoc);
                 }
             }
         });

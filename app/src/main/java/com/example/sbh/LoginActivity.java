@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class LoginActivity extends AppCompatActivity {
     //haven't figured out what the current account is yet, will know after login so this info can be used to access correct data for other pages that succeed the login.
-    public Account currentAcc = null;
+    public static Account currentAcc = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

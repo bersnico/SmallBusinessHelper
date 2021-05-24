@@ -7,6 +7,8 @@ import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
+import static com.example.sbh.BusinessAccountEditActivity.checkFilled;
+
 public class ConsumerAccountEditActivity extends AppCompatActivity {
 
     @Override
@@ -27,24 +29,22 @@ public class ConsumerAccountEditActivity extends AppCompatActivity {
         apply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent startIntent = new Intent(getApplicationContext(), ConsumerAccountActivity.class);
-                startActivity(startIntent);
+
+                EditText nPassword = findViewById(R.id.changePassword);
+                String newPassword = nPassword.getText().toString();
+                EditText nLocation = findViewById(R.id.changeLocation);
+                String newLocation = nLocation.getText().toString();
+
+                if(checkFilled(newPassword, newLocation)) {
+                    LoginActivity.currentAcc.setPassword(newPassword);
+
+                }
             }
         });
 
-        EditText changeName = findViewById(R.id.changeName);
-        String newName = changeName.getText().toString();
-        EditText changePassword = findViewById(R.id.changePassword);
-        String newPassword = changePassword.getText().toString();
-        EditText changeLocation = findViewById(R.id.changeLocation);
-        String newLocation = changeLocation.getText().toString();
 
-
-
-
-
-
-
-
+    }
+    public static boolean checkFilled(String newP, String newL) {
+        return !newP.equals("") && !newL.equals("");
     }
 }
