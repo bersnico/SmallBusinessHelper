@@ -5,30 +5,59 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".HomeScreen" android:background="#7703A9F4">
+        tools:context=".HomeScreen" android:background="#7A03A9F4">
 
     <TextView
             android:text="@string/home"
-            android:layout_width="194dp"
-            android:layout_height="60dp" android:id="@+id/textView4"
+            android:layout_width="193dp"
+            android:layout_height="47dp" android:id="@+id/textView4"
             android:fontFamily="@font/fenix" android:textStyle="bold"
             android:textColor="#0B0A0A" android:gravity="center" android:textSize="36sp"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toTopOf="@+id/searchView"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.833"/>
     <SearchView
             android:layout_width="289dp"
             android:layout_height="48dp"
             android:id="@+id/searchView" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintVertical_bias="0.169"/>
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintVertical_bias="0.183"
+            android:inputType="text">
+    </SearchView>
+
+    <com.google.android.material.tabs.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tabLayout"
+            app:layout_constraintBottom_toTopOf="@+id/textView4" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.0">
+
+        <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home" android:id="@+id/home"/>
+        <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/favorites" android:id="@+id/favs"/>
+        <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/map" android:id="@+id/map"/>
+
+        <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/profile" android:id="@+id/profile"/>
+    </com.google.android.material.tabs.TabLayout>
     <androidx.core.widget.NestedScrollView
             android:layout_width="380dp"
-            android:layout_height="273dp" android:fillViewport="true"
+            android:layout_height="500dp" android:fillViewport="true"
             android:id="@+id/favoritesDisplay"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.483"
-            app:layout_constraintVertical_bias="0.401">
+            app:layout_constraintTop_toBottomOf="@+id/searchView" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
         <LinearLayout android:layout_width="match_parent" android:layout_height="200dp"
                       android:orientation="vertical" android:verticalScrollbarPosition="right">
             <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="200dp"

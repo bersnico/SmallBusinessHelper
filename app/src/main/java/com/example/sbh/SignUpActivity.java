@@ -68,7 +68,7 @@ public class SignUpActivity extends AppCompatActivity {
                     if (checkBox.isChecked()) {
                         EditText phone = findViewById(R.id.editTextPhone);
                         String phoneNum = phone.getText().toString();
-                        EditText business = findViewById(R.id.editTextCategory);
+                        EditText business = findViewById(R.id.editTextBusinessName2);
                         String nameOfBusi = business.getText().toString();
                         EditText cat = findViewById(R.id.editTextCategory);
                         String category = cat.getText().toString();
