@@ -46,4 +46,7 @@
     <string name="phone">Phone</string>
     <string name="enter_new_business_name">Enter New Business Name</string>
     <string name="update_this">Update This</string>
+    <string name="update_name">Update Name</string>
+    <string name="location">Location</string>
+    <string name="update_password">Update Password</string>
 </resources>

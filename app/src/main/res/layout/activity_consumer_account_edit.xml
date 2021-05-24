@@ -20,11 +20,13 @@
                 android:ems="10"
                 android:id="@+id/changeLocation"
                 android:textSize="24sp"
-                app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="280dp"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="17dp"
                 android:layout_marginStart="17dp" android:layout_marginEnd="192dp" android:layout_marginRight="192dp"
                 app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.514"
-                tools:inputType="text" android:autofillHints="" android:inputType="text" android:hint="@string/location2"/>
+                tools:inputType="text" android:autofillHints="" android:inputType="text"
+                android:hint="@string/location" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.365"/>
         <TextView
                 android:text="@string/your_account"
                 android:layout_width="221dp"
@@ -62,7 +64,7 @@
                 android:layout_marginBottom="593dp" app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginLeft="179dp" android:layout_marginStart="179dp" android:layout_marginEnd="30dp"
                 android:layout_marginRight="30dp" app:layout_constraintEnd_toEndOf="parent"
-                tools:inputType="textPersonName" android:autofillHints="" android:hint="@string/update_name2"/>
+                tools:inputType="textPersonName" android:autofillHints="" android:hint="@string/update_name"/>
         <EditText
                 android:layout_width="202dp"
                 android:layout_height="50dp"
@@ -76,7 +78,7 @@
                 android:layout_marginStart="179dp" android:layout_marginEnd="30dp" android:layout_marginRight="30dp"
                 app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.514"
                 app:layout_constraintVertical_bias="0.345" tools:inputType="textPassword"
-                android:autofillHints="" android:hint="@string/update_password2"/>
+                android:autofillHints="" android:hint="@string/update_password"/>
         <Button
                 android:text="@string/cancel"
                 android:layout_width="wrap_content"
