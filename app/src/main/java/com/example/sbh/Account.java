@@ -5,15 +5,15 @@ import java.util.ArrayList;
 public class Account {
 
 	protected static ArrayList<Account> accounts;
-	protected int idNum;
+	protected static int idNum;
 	protected String email, password, address;
-	protected boolean isBusiness;
 
-	public Account(String email, String password, String address, int idNum) {
+
+	public Account(String email, String password, String address, int idNumb) {
 		this.email=email;
 		this.password=password;
 		this.address=address;
-		this.idNum = idNum;
+		idNum = idNumb;
 		accounts = new ArrayList<>();
 		accounts.add(this);
 		insertionSort();
@@ -32,8 +32,10 @@ public class Account {
 		}
 	}
 
+
+
 	public boolean getUserType () {
-		return isBusiness;
+		return getUserType();
 	}
 
 	public String getPassword() {
@@ -44,12 +46,8 @@ public class Account {
 		return email;
 	}
 
-	public String getLocation() { return address; }
-
-	//mutator methods
-	public void setPassword(String newPassword) { password = newPassword; }
-
-	public void setLocation(String newAddress) { address = newAddress; }
-
+	public String getLocation() {
+		return address;
+	}
 
 }

@@ -5,6 +5,7 @@ public class BusinessAccount extends Account{
 
 	private String category, email, phoneNumber, businessName;
 	private int priceRange;
+	private boolean isBusiness;
 
 	public BusinessAccount(String nameOfBusiness, String email, String password, String address, String phoneNumber, String category, int priceRange, int iD) {
 		super(nameOfBusiness, password, address, iD);
@@ -21,11 +22,20 @@ public class BusinessAccount extends Account{
 		this.phoneNumber = this.phoneNumber + " " + temp;
 		temp = phoneNumber.substring(6);
 		this.phoneNumber = this.phoneNumber + "-" + temp;
-
+		isBusiness=true;
 	}
 
 	public String getName() {
 		return businessName;
+	}
+	public void setCategory(String category){
+		this.category=category;
+	}
+	public void setBusinessName(String B){
+		this.businessName=B;
+	}
+	public boolean getUserType(){
+		return isBusiness;
 	}
 
 	public String getCategory() {
@@ -43,23 +53,4 @@ public class BusinessAccount extends Account{
 	public String getEmail() {
 		return email;
 	}
-
-//mutator methods
-	public void setName(String newName) {
-	businessName = newName;
-}
-	public void setCategory(String newCategory) {
-		category = newCategory;
-	}
-
-	public void setPriceRange(int newPrice) {
-		priceRange = newPrice;
-	}
-
-	public void setNumber(String newNumber) {
-		phoneNumber = newNumber;
-	}
-
-
-
 }
