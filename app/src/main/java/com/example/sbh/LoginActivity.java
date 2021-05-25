@@ -5,13 +5,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class LoginActivity extends AppCompatActivity {
     //haven't figured out what the current account is yet, will know after login so this info can be used to access correct data for other pages that succeed the login.
-    public static BusinessAccount currentBAcc = null;
-    public static ConsumerAccount currentCAcc = null;
-
+    public static Account currentAcc = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,23 +26,27 @@ public class LoginActivity extends AppCompatActivity {
                 //do the same for the entered password
                 String password = ((EditText) findViewById(R.id.editTextTextPassword)).getText().toString();
 
+                currentAcc = Account.accounts.get(binarySearchAccountsString(email, 0, Account.accounts.size()-1));
+                //currentAcc = Account.accounts.get(0);
+
                 if(loginPermitted(email, password)){
-                    Intent startIntent = new Intent(getApplicationContext(), HomeScreen.class);
-                    startActivity(startIntent);
+                    if (currentAcc.getUserType()) {
+                        Intent startIntent = new Intent(getApplicationContext(), BusinessAccountActivity.class);
+                        startActivity(startIntent);
+                    } else {
+                        Intent startIntent = new Intent(getApplicationContext(), HomeScreen.class);
+                        startActivity(startIntent);
+                    }
+               } else {
+                    TextView error = findViewById(R.id.loginCheck);
+                    error.setVisibility(View.VISIBLE);
                 }
             }
 
             public boolean loginPermitted(String email, String password){
-
-                Account currentAcc = Account.accounts.get(binarySearchAccountsString(email, 0, Account.accounts.size()-1));
-                if(currentAcc.getUserType()){
-                    currentBAcc = (BusinessAccount) currentAcc;
-                }
-                else{
-                    currentCAcc = (ConsumerAccount) currentAcc;
-                }
                 //if email is found and password is correct, permit login, otherwise do not.
-                return binarySearchAccountsString(email, 0, Account.accounts.size() - 1) > -1 && (currentAcc.getPassword().equals(password));
+                //return currentAcc.getPassword().equals(password);
+                return ((binarySearchAccountsString(email, 0, Account.accounts.size() - 1) > -1) && (currentAcc.getPassword().equals(password)));
             }
 
 

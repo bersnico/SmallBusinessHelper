@@ -40,12 +40,12 @@ public class BusinessAccountEditActivity extends AppCompatActivity {
                 EditText newCat = findViewById(R.id.editCat);
                 String newCate =newCat.getText().toString();
                 if(checkFilled(newB, newNum, newLoc, newP, newCate)){
-                    LoginActivity.currentBAcc.setBusinessName(newB);
-                    LoginActivity.currentBAcc.setPhoneNumber(newNum);
-                    LoginActivity.currentBAcc.setLocation(newLoc);
-                    int nP = Integer.parseInt(newP);
-                    LoginActivity.currentBAcc.setPriceRange(nP);
-                    LoginActivity.currentBAcc.setCategory(newCate);
+//                    LoginActivity.currentBAcc.setBusinessName(newB);
+//                    LoginActivity.currentBAcc.setPhoneNumber(newNum);
+//                    LoginActivity.currentBAcc.setLocation(newLoc);
+//                    int nP = Integer.parseInt(newP);
+//                    LoginActivity.currentBAcc.setPriceRange(nP);
+//                    LoginActivity.currentBAcc.setCategory(newCate);
                 }
             }
         });

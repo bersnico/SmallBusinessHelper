@@ -5,7 +5,6 @@ public class BusinessAccount extends Account{
 
 	private String category, email, phoneNumber, businessName;
 	private int priceRange;
-	private boolean isBusiness;
 
 	public BusinessAccount(String nameOfBusiness, String email, String password, String address, String phoneNumber, String category, int priceRange, int iD) {
 		super(nameOfBusiness, password, address, iD);
@@ -22,7 +21,6 @@ public class BusinessAccount extends Account{
 		this.phoneNumber = this.phoneNumber + " " + temp;
 		temp = phoneNumber.substring(6);
 		this.phoneNumber = this.phoneNumber + "-" + temp;
-		isBusiness=true;
 	}
 
 	public String getName() {
@@ -36,9 +34,6 @@ public class BusinessAccount extends Account{
 	}
 
 	public void setPhoneNumber(String nNumber){ phoneNumber = nNumber; }
-	public boolean getUserType(){
-		return isBusiness;
-	}
 
 	public void setPriceRange(int nPrice){ priceRange = nPrice; }
 

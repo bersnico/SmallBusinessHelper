@@ -4,17 +4,16 @@ import java.util.ArrayList;
 
 public class Account {
 
-	protected static ArrayList<Account> accounts;
+	public static ArrayList<Account> accounts = new ArrayList<Account>();
 	protected static int idNum;
 	protected String email, password, address;
-
+	protected boolean isBusiness;
 
 	public Account(String email, String password, String address, int idNumb) {
 		this.email=email;
 		this.password=password;
 		this.address=address;
 		idNum = idNumb;
-		accounts = new ArrayList<>();
 		accounts.add(this);
 		insertionSort();
 	}
@@ -32,10 +31,8 @@ public class Account {
 		}
 	}
 
-
-
-	public boolean getUserType () {
-		return getUserType();
+	public boolean getUserType(){
+		return isBusiness;
 	}
 
 	public String getPassword() {
