@@ -51,4 +51,8 @@
     <string name="business">Business</string>
     <string name="apply_edits">Apply Edits</string>
     <string name="return_to_search">Return To Search</string>
+    <string name="map">Map</string>
+    <string name="profile">Profile</string>
+    <string name="add_images">Add Images</string>
+
 </resources>

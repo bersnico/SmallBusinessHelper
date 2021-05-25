@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "939639766586",
+    "project_id": "ringed-glass-313501",
+    "storage_bucket": "ringed-glass-313501.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:939639766586:android:5d875ad0ef263942f9ff03",
+        "android_client_info": {
+          "package_name": "com.example.sbh"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "939639766586-q1fqdfn11l2311vogch61iftnllg706d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgs9AkjI5b5jA_H-vfPlafvwG6krMtGLQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "939639766586-q1fqdfn11l2311vogch61iftnllg706d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

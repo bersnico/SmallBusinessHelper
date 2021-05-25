@@ -13,8 +13,16 @@ public class BusinessAccountActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_business_account);
 
-        Button logInBtn = findViewById(R.id.button2);
-        logInBtn.setOnClickListener(new View.OnClickListener() {
+        Button edit = findViewById(R.id.edit);
+        edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent startIntent = new Intent(getApplicationContext(), BusinessAccountEditActivity.class);
+                startActivity(startIntent);
+            }
+        });
+        Button logOut = findViewById(R.id.button2);
+        logOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent startIntent = new Intent(getApplicationContext(), MainActivity.class);
