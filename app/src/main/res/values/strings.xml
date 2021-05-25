@@ -22,7 +22,7 @@
     <string name="emailDisplay">Email:</string>
     <string name="enter_a_category">Enter a category</string>
     <string name="enter_price_range_1_4">Enter Price Range(1-4)</string>
-    <string name="location">Location</string>
+    <string name="location2">Location</string>
     <string name="edit_profile">Edit Profile</string>
     <string name="favorites">Favorites</string>
     <string name="price">Price</string>
@@ -47,8 +47,12 @@
     <string name="enter_new_business_name">Enter New Business Name</string>
     <string name="update_this">Update This</string>
     <string name="update_name">Update Name</string>
+    <string name="location">Location</string>
     <string name="update_password">Update Password</string>
     <string name="business">Business</string>
-    <string name="apply_edits">Apply Edits</string>
-    <string name="return_to_search">Return To Search</string>
+    <string name="return_to_search">RETURN TO SEARCH</string>
+    <string name="apply_edits">APPLY EDITS</string>
+    <string name="map">MAP</string>
+    <string name="profile">PROFILE</string>
+    <string name="email">Email</string>
 </resources>

@@ -52,4 +52,12 @@
             app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.253"
             android:fontFamily="@font/fenix"/>
+    <TextView
+            android:text="This email or password didn't match an ePages account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/loginCheck"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress" android:textColor="#FF0000"
+            android:visibility="invisible"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
