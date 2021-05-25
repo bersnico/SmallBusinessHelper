@@ -7,8 +7,6 @@ import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
-import static com.example.sbh.BusinessAccountEditActivity.checkFilled;
-
 public class ConsumerAccountEditActivity extends AppCompatActivity {
 
     @Override
@@ -25,7 +23,7 @@ public class ConsumerAccountEditActivity extends AppCompatActivity {
             }
         });
 
-        Button apply = findViewById(R.id.apply);
+        Button apply = findViewById(R.id.edit);
         apply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

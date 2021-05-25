@@ -21,5 +21,14 @@ public class BusinessAccountActivity extends AppCompatActivity {
                 startActivity(startIntent);
             }
         });
+
+        Button editBtn = findViewById(R.id.edit);
+        editBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent startIntent = new Intent(getApplicationContext(), BusinessAccountEditActivity.class);
+                startActivity(startIntent);
+            }
+        });
     }
 }
