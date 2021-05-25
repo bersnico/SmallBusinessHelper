@@ -54,5 +54,6 @@
     <string name="map">Map</string>
     <string name="profile">Profile</string>
     <string name="add_images">Add Images</string>
+    <string name="email">Email</string>
 
 </resources>
