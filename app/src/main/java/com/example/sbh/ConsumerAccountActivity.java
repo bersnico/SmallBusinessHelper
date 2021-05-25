@@ -22,5 +22,14 @@ public class ConsumerAccountActivity extends AppCompatActivity {
             }
         });
 
+        Button editBtn = findViewById(R.id.edit);
+        editBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent startIntent = new Intent(getApplicationContext(), BusinessAccountEditActivity.class);
+                startActivity(startIntent);
+            }
+        });
+
     }
 }

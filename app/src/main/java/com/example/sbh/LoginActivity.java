@@ -10,7 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class LoginActivity extends AppCompatActivity {
     //haven't figured out what the current account is yet, will know after login so this info can be used to access correct data for other pages that succeed the login.
-    public static Account currentAcc = null;
+    public static BusinessAccount currentBAcc = null;
+    public static ConsumerAccount currentCAcc= null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,14 +27,16 @@ public class LoginActivity extends AppCompatActivity {
                 //do the same for the entered password
                 String password = ((EditText) findViewById(R.id.editTextTextPassword)).getText().toString();
 
-                currentAcc = Account.accounts.get(binarySearchAccountsString(email, 0, Account.accounts.size()-1));
+                Account currentAcc = Account.accounts.get(binarySearchAccountsString(email, 0, Account.accounts.size()-1));
                 //currentAcc = Account.accounts.get(0);
 
                 if(loginPermitted(email, password)){
                     if (currentAcc.getUserType()) {
+                        currentBAcc = (BusinessAccount) currentAcc;
                         Intent startIntent = new Intent(getApplicationContext(), BusinessAccountActivity.class);
                         startActivity(startIntent);
                     } else {
+                        currentCAcc = (ConsumerAccount) currentAcc;
                         Intent startIntent = new Intent(getApplicationContext(), HomeScreen.class);
                         startActivity(startIntent);
                     }
@@ -46,7 +49,7 @@ public class LoginActivity extends AppCompatActivity {
             public boolean loginPermitted(String email, String password){
                 //if email is found and password is correct, permit login, otherwise do not.
                 //return currentAcc.getPassword().equals(password);
-                return ((binarySearchAccountsString(email, 0, Account.accounts.size() - 1) > -1) && (currentAcc.getPassword().equals(password)));
+                return ((binarySearchAccountsString(email, 0, Account.accounts.size() - 1) > -1) && (currentBAcc.getPassword().equals(password) || currentCAcc.getPassword().equals(password)));
             }
 
 
