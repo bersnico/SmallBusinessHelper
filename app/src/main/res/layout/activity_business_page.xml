@@ -13,13 +13,21 @@
             tools:context=".BusinessAccountActivity" android:background="#7A03A9F4">
 
         <TextView
-                android:text="@string/contact_info"
+                android:text="@string/email"
                 android:layout_width="107dp"
                 android:layout_height="36dp" android:id="@+id/textView7"
                 app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintHorizontal_bias="0.562" android:textSize="24sp"
+                app:layout_constraintHorizontal_bias="0.555" android:textSize="24sp"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.343" app:layout_constraintBottom_toTopOf="@+id/textView12"/>
+                app:layout_constraintVertical_bias="0.418" app:layout_constraintBottom_toTopOf="@+id/textView12"/>
+        <TextView
+                android:text="@string/phone"
+                android:layout_width="107dp"
+                android:layout_height="36dp" android:id="@+id/textView8"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.555" android:textSize="24sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.27" app:layout_constraintBottom_toTopOf="@+id/textView12"/>
         <TextView
                 android:text="@string/favorites"
                 android:layout_width="107dp"
