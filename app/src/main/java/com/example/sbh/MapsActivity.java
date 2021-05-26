@@ -3,6 +3,8 @@ package com.example.sbh;
 import android.Manifest;
 import android.app.Activity;
 import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Geocoder;
 import android.location.Location;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,7 +23,13 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.io.IOException;
+import java.util.List;
+import java.util.Locale;
+
+import static com.example.sbh.LoginActivity.currentBAcc;
 
 
 public class MapsActivity extends Activity implements OnMapReadyCallback {
@@ -44,8 +52,23 @@ public class MapsActivity extends Activity implements OnMapReadyCallback {
         mapView = findViewById(R.id.user_list_map);
         mapView.onCreate(mapViewBundle);
         mapView.getMapAsync(this);
+
     }
 
+    public LatLng getLatLangFromAddress(String strAddress){
+        Geocoder coder = new Geocoder(this, Locale.getDefault());
+        List<Address> address;
+        try {
+            address = coder.getFromLocationName(strAddress,5);
+            if (address == null) {
+                return new LatLng(-10000, -10000);
+            }
+            Address location = address.get(0);
+            return new LatLng(location.getLatitude(), location.getLongitude());
+        } catch (IOException e) {
+            return new LatLng(-10000, -10000);
+        }
+    }
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
@@ -100,9 +123,13 @@ public class MapsActivity extends Activity implements OnMapReadyCallback {
         gmap = googleMap;
 
         enableMyLocation(gmap);
-        LatLng home = new LatLng(37.421982, -122.085109);
-        gmap.moveCamera(CameraUpdateFactory.newLatLngZoom(home, INITIAL_ZOOM));
-
+        //String address = LoginActivity.currentBAcc.getLocation();
+        String address = "16 Robinson Park, Winchester";
+        LatLng bLoc = getLatLangFromAddress(address);
+        gmap.addMarker(new MarkerOptions()
+                .position(bLoc)
+                .title("Marker on business"));
+        gmap.moveCamera(CameraUpdateFactory.newLatLngZoom(bLoc, INITIAL_ZOOM));
     }
     private void enableMyLocation(GoogleMap map) {
         if (ContextCompat.checkSelfPermission(this,

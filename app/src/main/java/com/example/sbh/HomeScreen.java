@@ -12,25 +12,7 @@ public class HomeScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
-        TabItem home = findViewById(R.id.home);
-        TabItem favs = findViewById(R.id.favs);
-        TabItem profile = findViewById(R.id.profile);
-        TabItem maps = findViewById(R.id.map);
-        TabLayout tabs = findViewById(R.id.tabLayout);
-        int pos = tabs.getSelectedTabPosition();
-        switch (pos){
-            case 0: goHome();
-            break;
 
-            case 1: goFavorites();
-            break;
-
-            case 2: goMap();
-            break;
-
-            case 3: goProfile();
-            break;
-        }
     }
 
     private void goProfile() {
