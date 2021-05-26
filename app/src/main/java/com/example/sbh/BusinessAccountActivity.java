@@ -18,9 +18,9 @@ public class BusinessAccountActivity extends AppCompatActivity {
         String currBName = LoginActivity.currentBAcc.getName();
         cBName.setText(currBName);
 
-        TextView cEmail = findViewById(R.id.textView7);
-        String currEmail = LoginActivity.currentBAcc.getEmail();
-        cEmail.setText(currEmail);
+        TextView cPhone = findViewById(R.id.textView7);
+        String currPhone = LoginActivity.currentBAcc.getNumber();
+        cPhone.setText(currPhone);
 
         //no favorite variable yet
 //        TextView cFavorites = findViewById(R.id.textView6);

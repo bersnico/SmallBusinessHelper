@@ -10,10 +10,7 @@ import android.os.Build;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EdgeEffect;
-import android.widget.EditText;
-import android.widget.ImageView;
+import android.widget.*;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -30,6 +27,32 @@ public class BusinessAccountEditActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_business_account_edit);
+
+        TextView cBName = findViewById(R.id.editBName);
+        String currBName = LoginActivity.currentBAcc.getName();
+        cBName.setText(currBName);
+
+        TextView cPhone = findViewById(R.id.editCntct);
+        String currPhone = LoginActivity.currentBAcc.getNumber();
+        cPhone.setText(currPhone);
+
+        //no favorite variable yet
+//        TextView cFavorites = findViewById(R.id.textView6);
+//        String currFav = LoginActivity.currentBAcc.get();
+//        cFavorites.setText(currFav);
+
+        TextView cPrice = findViewById(R.id.editprice);
+        String currPrice = LoginActivity.currentBAcc.getPriceRange() + "";
+        cBName.setText(currBName);
+
+        TextView cCat = findViewById(R.id.editCat);
+        String currCat = LoginActivity.currentBAcc.getCategory();
+        cCat.setText(currCat);
+
+        TextView cLoc = findViewById(R.id.editLoc);
+        String currLoc = LoginActivity.currentBAcc.getLocation();
+        cLoc.setText(currLoc);
+
         Button addImg = findViewById(R.id.addImagesBtn);
         addImg.setOnClickListener(new View.OnClickListener() {
             @Override
