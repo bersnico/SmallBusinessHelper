@@ -58,5 +58,6 @@
     <string name="profile_image">Profile Image</string>
     <string name="address">Address</string>
     <string name="number_of_stars">Number of Stars</string>
+    <string name="numStars">Number of Stars: **add this**</string>
 
 </resources>
