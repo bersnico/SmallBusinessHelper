@@ -30,6 +30,10 @@ public class BusinessPageActivity extends AppCompatActivity {
         String currPhone = LoginActivity.currentBAcc.getNumber();
         cPhone.setText(currPhone);
 
+        TextView cEmail = findViewById(R.id.textView7);
+        String currEmail = LoginActivity.currentBAcc.getEmail();
+        cEmail.setText(currEmail);
+
         TextView cFavorites = findViewById(R.id.textView14);
         int currFav = LoginActivity.currentBAcc.getNumFavorites();
         cFavorites.setText(currFav);
