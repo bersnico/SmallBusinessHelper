@@ -2,9 +2,8 @@ package com.example.sbh;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.ImageView;
-import android.widget.SearchView;
-import android.widget.TextView;
+import android.view.View;
+import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
@@ -48,10 +47,18 @@ public class HomeScreen extends AppCompatActivity {
         businessName.setText(currentResult.getName());
         TextView addressDisp = findViewById(R.id.addressDisp);
         addressDisp.setText(currentResult.getLocation());
-        TextView stars = findViewById(R.id.stars);
-        stars.setText(currentResult.getRating());
+        RatingBar stars = findViewById(R.id.ratingBar);
+        stars.setRating((float) currentResult.getRating());
         TextView categoryDisp = findViewById(R.id.categoryDisp);
         categoryDisp.setText(currentResult.getCategory());
+        Button goToProfile1 = findViewById(R.id.pageBtn1);
+        goToProfile1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent startIntent = new Intent(getApplicationContext(), BusinessPageActivity.class);
+                startActivity(startIntent);
+            }
+        });
 
 
         //result 2
@@ -62,10 +69,18 @@ public class HomeScreen extends AppCompatActivity {
         businessName2.setText(currentResult.getName());
         TextView addressDisp2 = findViewById(R.id.addressDisp2);
         addressDisp2.setText(currentResult.getLocation());
-        TextView stars2 = findViewById(R.id.stars2);
-        stars2.setText(currentResult.getRating());
+        RatingBar stars2 = findViewById(R.id.ratingBar2);
+        stars2.setRating((float) currentResult.getRating());
         TextView categoryDisp2 = findViewById(R.id.categoryDisp2);
         categoryDisp2.setText(currentResult.getCategory());
+        Button goToProfile2 = findViewById(R.id.pageBtn2);
+        goToProfile2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent startIntent = new Intent(getApplicationContext(), BusinessPageActivity.class);
+                startActivity(startIntent);
+            }
+        });
 
         //result 3
         currentResult = sortedBySearch.get(2);
@@ -75,10 +90,18 @@ public class HomeScreen extends AppCompatActivity {
         businessName3.setText(currentResult.getName());
         TextView addressDisp3 = findViewById(R.id.addressDisp3);
         addressDisp3.setText(currentResult.getLocation());
-        TextView stars3 = findViewById(R.id.stars3);
-        stars3.setText(currentResult.getRating());
+        RatingBar stars3 = findViewById(R.id.ratingBar3);
+        stars3.setRating((float) currentResult.getRating());
         TextView categoryDisp3 = findViewById(R.id.categoryDisp3);
         categoryDisp3.setText(currentResult.getCategory());
+        Button goToProfile3 = findViewById(R.id.pageBtn3);
+        goToProfile3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent startIntent = new Intent(getApplicationContext(), BusinessPageActivity.class);
+                startActivity(startIntent);
+            }
+        });
 
         //result 4
         currentResult = sortedBySearch.get(3);
@@ -88,10 +111,18 @@ public class HomeScreen extends AppCompatActivity {
         businessName4.setText(currentResult.getName());
         TextView addressDisp4 = findViewById(R.id.addressDisp4);
         addressDisp4.setText(currentResult.getLocation());
-        TextView stars4 = findViewById(R.id.stars4);
-        stars4.setText(currentResult.getRating());
+        RatingBar stars4 = findViewById(R.id.ratingBar4);
+        stars4.setRating((float) currentResult.getRating());
         TextView categoryDisp4 = findViewById(R.id.categoryDisp4);
         categoryDisp4.setText(currentResult.getCategory());
+        Button goToProfile4 = findViewById(R.id.pageBtn4);
+        goToProfile4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent startIntent = new Intent(getApplicationContext(), BusinessPageActivity.class);
+                startActivity(startIntent);
+            }
+        });
 
         //result 5
         currentResult = sortedBySearch.get(5);
@@ -101,13 +132,21 @@ public class HomeScreen extends AppCompatActivity {
         businessName5.setText(currentResult.getName());
         TextView addressDisp5 = findViewById(R.id.addressDisp5);
         addressDisp5.setText(currentResult.getLocation());
-        TextView stars5 = findViewById(R.id.stars5);
-        stars5.setText(currentResult.getRating());
+        RatingBar stars5 = findViewById(R.id.ratingBar5);
+        stars5.setRating((float) currentResult.getRating());
         TextView categoryDisp5 = findViewById(R.id.categoryDisp5);
         categoryDisp5.setText(currentResult.getCategory());
+        Button goToProfile5 = findViewById(R.id.pageBtn5);
+        goToProfile5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent startIntent = new Intent(getApplicationContext(), BusinessPageActivity.class);
+                startActivity(startIntent);
+            }
+        });
     }
 
-    private static ArrayList<Account> updateSearches(String search){
+    private static void updateSearches(String search){
 
 
 
@@ -128,7 +167,6 @@ public class HomeScreen extends AppCompatActivity {
             prev=current;
         }
 
-        return sortedBySearch;
     }
 
     public static int distance(String a, String b) {

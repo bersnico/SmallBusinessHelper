@@ -48,20 +48,21 @@
                 <TextView android:layout_width="200dp" android:layout_height="25dp" android:id="@+id/BusinessName"
                           android:translationX="105dp" android:translationY="20dp"
                           android:text="@string/business_name" android:textColor="#191818"/>
-                <TextView android:layout_width="200dp" android:layout_height="25dp" android:id="@+id/stars"
-                          android:translationX="10dp" android:translationY="105dp" android:text="@string/number_of_stars"
-                          android:textColor="#0C0A0A"/>
                 <TextView android:layout_width="200dp" android:layout_height="25dp" android:id="@+id/addressDisp"
                           android:translationX="105dp" android:translationY="67dp" android:text="@string/address"
                           android:textColor="#0C0A0A"/>
                 <TextView android:layout_width="200dp" android:layout_height="25dp" android:id="@+id/categoryDisp"
-                          android:translationX="10dp" android:translationY="140dp" android:text="@string/category"
+                          android:translationX="10dp" android:translationY="110dp" android:text="@string/category"
                           android:textColor="#0C0A0A"/>
                 <Button
                         android:text="@string/go_to_page"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" android:id="@+id/pageBtn1" android:translationX="220dp"
                         android:translationY="110dp"/>
+                <RatingBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp" android:id="@+id/ratingBar" android:translationX="10dp"
+                        android:translationY="150dp"/>
 
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="200dp"
@@ -81,15 +82,16 @@
                 <TextView android:layout_width="200dp" android:layout_height="25dp" android:id="@+id/BusinessName2"
                           android:translationX="105dp" android:translationY="20dp"
                           android:text="@string/business_name" android:textColor="#191818"/>
-                <TextView android:layout_width="200dp" android:layout_height="25dp" android:id="@+id/stars2"
-                          android:translationX="10dp" android:translationY="105dp" android:text="@string/number_of_stars"
-                          android:textColor="#0C0A0A"/>
                 <TextView android:layout_width="200dp" android:layout_height="25dp" android:id="@+id/addressDisp2"
                           android:translationX="105dp" android:translationY="67dp" android:text="@string/address"
                           android:textColor="#0C0A0A"/>
                 <TextView android:layout_width="200dp" android:layout_height="25dp" android:id="@+id/categoryDisp2"
-                          android:translationX="10dp" android:translationY="140dp" android:text="@string/category"
+                          android:translationX="10dp" android:translationY="110dp" android:text="@string/category"
                           android:textColor="#0C0A0A"/>
+                <RatingBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp" android:id="@+id/ratingBar2" android:translationX="10dp"
+                        android:translationY="150dp"/>
 
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="200dp"
@@ -109,15 +111,16 @@
                 <TextView android:layout_width="200dp" android:layout_height="25dp" android:id="@+id/BusinessName3"
                           android:translationX="105dp" android:translationY="20dp"
                           android:text="@string/business_name" android:textColor="#191818"/>
-                <TextView android:layout_width="200dp" android:layout_height="25dp" android:id="@+id/stars3"
-                          android:translationX="10dp" android:translationY="105dp" android:text="@string/number_of_stars"
-                          android:textColor="#0C0A0A"/>
                 <TextView android:layout_width="200dp" android:layout_height="25dp" android:id="@+id/addressDisp3"
                           android:translationX="105dp" android:translationY="67dp" android:text="@string/address"
                           android:textColor="#0C0A0A"/>
                 <TextView android:layout_width="200dp" android:layout_height="25dp" android:id="@+id/categoryDisp3"
-                          android:translationX="10dp" android:translationY="140dp" android:text="@string/category"
+                          android:translationX="10dp" android:translationY="110dp" android:text="@string/category"
                           android:textColor="#0C0A0A"/>
+                <RatingBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp" android:id="@+id/ratingBar3" android:translationX="10dp"
+                        android:translationY="150dp"/>
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="200dp"
                                                app:cardCornerRadius="10dp" app:cardElevation="10dp" android:id="@+id/bx4">
@@ -136,15 +139,16 @@
                 <TextView android:layout_width="200dp" android:layout_height="25dp" android:id="@+id/BusinessName4"
                           android:translationX="105dp" android:translationY="20dp"
                           android:text="@string/business_name" android:textColor="#191818"/>
-                <TextView android:layout_width="200dp" android:layout_height="25dp" android:id="@+id/stars4"
-                          android:translationX="10dp" android:translationY="105dp" android:text="@string/number_of_stars"
-                          android:textColor="#0C0A0A"/>
                 <TextView android:layout_width="200dp" android:layout_height="25dp" android:id="@+id/addressDisp4"
                           android:translationX="105dp" android:translationY="67dp" android:text="@string/address"
                           android:textColor="#0C0A0A"/>
                 <TextView android:layout_width="200dp" android:layout_height="25dp" android:id="@+id/categoryDisp4"
-                          android:translationX="10dp" android:translationY="140dp" android:text="@string/category"
+                          android:translationX="10dp" android:translationY="110dp" android:text="@string/category"
                           android:textColor="#0C0A0A"/>
+                <RatingBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp" android:id="@+id/ratingBar4" android:translationX="10dp"
+                        android:translationY="150dp"/>
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="200dp"
                                                app:cardCornerRadius="10dp" app:cardElevation="10dp" android:id="@+id/bx5">
@@ -163,15 +167,16 @@
                 <TextView android:layout_width="200dp" android:layout_height="25dp" android:id="@+id/BusinessName5"
                           android:translationX="105dp" android:translationY="20dp"
                           android:text="@string/business_name" android:textColor="#191818"/>
-                <TextView android:layout_width="200dp" android:layout_height="25dp" android:id="@+id/stars5"
-                          android:translationX="10dp" android:translationY="105dp" android:text="@string/number_of_stars"
-                          android:textColor="#0C0A0A"/>
                 <TextView android:layout_width="200dp" android:layout_height="25dp" android:id="@+id/addressDisp5"
                           android:translationX="105dp" android:translationY="67dp" android:text="@string/address"
                           android:textColor="#0C0A0A"/>
                 <TextView android:layout_width="200dp" android:layout_height="25dp" android:id="@+id/categoryDisp5"
-                          android:translationX="10dp" android:translationY="140dp" android:text="@string/category"
+                          android:translationX="10dp" android:translationY="110dp" android:text="@string/category"
                           android:textColor="#0C0A0A"/>
+                <RatingBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp" android:id="@+id/ratingBar5" android:translationX="10dp"
+                        android:translationY="150dp"/>
             </androidx.cardview.widget.CardView>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
