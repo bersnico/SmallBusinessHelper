@@ -34,4 +34,6 @@ public class ConsumerAccount extends Account {
 	public String getName() {
 		return null;
 	}
+
+	public ArrayList<BusinessAccount> getFavs(){return favs;}
 }
