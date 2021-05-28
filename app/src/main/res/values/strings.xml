@@ -59,6 +59,6 @@
     <string name="address">Address</string>
     <string name="number_of_stars">Number of Stars</string>
     <string name="numStars">Number of Stars: **add this**</string>
-    <string name="go_to_page">Go to Page</string>
+    <string name="my_favorite">My Favorite</string>
 
 </resources>
