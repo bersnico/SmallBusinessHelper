@@ -5,15 +5,13 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.ImageDecoder;
 import android.graphics.drawable.Drawable;
+import android.media.Rating;
 import android.net.Uri;
 import android.os.Build;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EdgeEffect;
-import android.widget.EditText;
-import android.widget.ImageView;
+import android.widget.*;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -30,6 +28,31 @@ public class BusinessAccountEditActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_business_account_edit);
+
+        TextView cBName = findViewById(R.id.editBName);
+        String currBName = LoginActivity.currentBAcc.getName();
+        cBName.setText(currBName);
+
+        TextView cPhone = findViewById(R.id.editCntct);
+        String currPhone = LoginActivity.currentBAcc.getNumber();
+        cPhone.setText(currPhone);
+
+        TextView cFavorites = findViewById(R.id.textView14);
+        int currFav = LoginActivity.currentBAcc.getNumFavorites();
+        cFavorites.setText(currFav);
+
+        TextView cPrice = findViewById(R.id.editprice);
+        String currPrice = LoginActivity.currentBAcc.getPriceRange() + "";
+        cBName.setText(currBName);
+
+        TextView cCat = findViewById(R.id.editCat);
+        String currCat = LoginActivity.currentBAcc.getCategory();
+        cCat.setText(currCat);
+
+        TextView cLoc = findViewById(R.id.editLoc);
+        String currLoc = LoginActivity.currentBAcc.getLocation();
+        cLoc.setText(currLoc);
+
         Button addImg = findViewById(R.id.addImagesBtn);
         addImg.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,6 +109,7 @@ public class BusinessAccountEditActivity extends AppCompatActivity {
                     }
                 }
             }
+
         });
         Button cancel = findViewById(R.id.backBtn);
         cancel.setOnClickListener(new View.OnClickListener() {
@@ -108,9 +132,9 @@ public class BusinessAccountEditActivity extends AppCompatActivity {
             Bitmap bitmap = null;
             try {
                 Drawable draw = ImageDecoder.decodeDrawable(ImageDecoder.createSource(this.getContentResolver(), selectedImage));
-                ImageView getImage = findViewById(R.id.imageView6);
+                ImageView getImage = findViewById(R.id.imageView3);
                 getImage.setImageDrawable(draw);
-                images.add(getImage);
+                LoginActivity.currentBAcc.setPFP(draw);
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             } catch (IOException e) {

@@ -1,6 +1,10 @@
 package com.example.sbh;
 
+import android.content.Context;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+import android.provider.BaseColumns;
 import android.view.View;
 import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
@@ -107,6 +111,8 @@ public class SignUpActivity extends AppCompatActivity {
             }
         });
     }
+
+
 }
 //    public static boolean isValidEmail(CharSequence target) {
 //        boolean isValid = target != null && android.util.Patterns.EMAIL_ADDRESS.matcher(target).matches();

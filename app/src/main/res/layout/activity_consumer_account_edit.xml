@@ -55,18 +55,6 @@
                 android:layout_width="wrap_content" android:text="@string/apply_edits"/>
         <EditText
                 android:layout_width="202dp"
-                android:layout_height="55dp"
-                android:inputType="textPersonName"
-                android:ems="10"
-                android:id="@+id/changeName"
-                android:textSize="24sp" app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginTop="83dp" app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginBottom="593dp" app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginLeft="179dp" android:layout_marginStart="179dp" android:layout_marginEnd="30dp"
-                android:layout_marginRight="30dp" app:layout_constraintEnd_toEndOf="parent"
-                tools:inputType="textPersonName" android:autofillHints="" android:hint="@string/update_name"/>
-        <EditText
-                android:layout_width="202dp"
                 android:layout_height="50dp"
                 android:inputType="text|textPassword"
                 android:ems="10"
@@ -76,8 +64,8 @@
                 app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="518dp"
                 app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="179dp"
                 android:layout_marginStart="179dp" android:layout_marginEnd="30dp" android:layout_marginRight="30dp"
-                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.514"
-                app:layout_constraintVertical_bias="0.345" tools:inputType="textPassword"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.485"
+                app:layout_constraintVertical_bias="0.0" tools:inputType="textPassword"
                 android:autofillHints="" android:hint="@string/update_password"/>
         <Button
                 android:text="@string/cancel"

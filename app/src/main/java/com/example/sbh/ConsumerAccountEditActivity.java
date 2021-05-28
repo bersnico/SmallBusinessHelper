@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -13,6 +14,15 @@ public class ConsumerAccountEditActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_consumer_account_edit);
+
+        TextView cPass = findViewById(R.id.changePassword);
+        String currPass = LoginActivity.currentCAcc.getEmail();
+        cPass.setText(currPass);
+
+        TextView cLocal = findViewById(R.id.changeLocation);
+        String currLocal = LoginActivity.currentCAcc.getLocation();
+        cLocal.setText(currLocal);
+
 
         Button cancel = findViewById(R.id.cancel);
         cancel.setOnClickListener(new View.OnClickListener() {

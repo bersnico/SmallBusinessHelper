@@ -1,10 +1,20 @@
 package com.example.sbh;
 
 
+import android.graphics.drawable.Drawable;
+
+import java.util.ArrayList;
+
 public class BusinessAccount extends Account{
 
-	private String category, email, phoneNumber, businessName;
-	private int priceRange;
+	private String category;
+	private final String email;
+	private String phoneNumber;
+	private String businessName;
+	private int priceRange, numFavorites;
+	private ArrayList<Double> ratings;
+	private double rating;
+	private Drawable pFPIMG;
 
 	public BusinessAccount(String nameOfBusiness, String email, String password, String address, String phoneNumber, String category, int priceRange, int iD) {
 		super(nameOfBusiness, password, address, iD);
@@ -21,6 +31,9 @@ public class BusinessAccount extends Account{
 		this.phoneNumber = this.phoneNumber + " " + temp;
 		temp = phoneNumber.substring(6);
 		this.phoneNumber = this.phoneNumber + "-" + temp;
+		rating = 0;
+		ratings = new ArrayList<Double>();
+		numFavorites=0;
 	}
 
 	public String getName() {
@@ -51,5 +64,34 @@ public class BusinessAccount extends Account{
 
 	public String getEmail() {
 		return email;
+	}
+
+	public void setPFP(Drawable pFPImg){
+		this.pFPIMG = pFPImg;
+	}
+
+	public Drawable getPFPIMG(){
+		return pFPIMG;
+	}
+
+	public double getRating() {
+		rating = 0;
+		for (double rate:ratings) {
+			rating+=rate;
+		}
+		rating/=ratings.size();
+		return rating;
+	}
+
+	public void addRating(double num){
+		ratings.add(num);
+	}
+
+	public int getNumFavorites() {
+		return numFavorites;
+	}
+
+	public void incrementNumFavorites(int num){
+		numFavorites++;
 	}
 }

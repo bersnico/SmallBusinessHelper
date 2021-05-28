@@ -55,10 +55,15 @@
     <string name="profile">Profile</string>
     <string name="add_images">Add Images</string>
     <string name="email">Email</string>
+    <string name="profile_image">Profile Image</string>
+    <string name="address">Address</string>
+    <string name="number_of_stars">Number of Stars</string>
+    <string name="numStars">Number of Stars: **add this**</string>
+    <string name="my_favorite">My Favorite</string>
+    <string name="go_to_page">Go to Page</string>
     <string name="favs">favs</string>
     <string name="account">account</string>
     <string name="acct">acct</string>
     <string name="maps">maps</string>
     <string name="favorite">favorite</string>
-
 </resources>
