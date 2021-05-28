@@ -2,6 +2,8 @@ package com.example.sbh;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,6 +29,14 @@ public class HomeScreen extends AppCompatActivity {
         stars.setText(R.string.numStars);
         TextView categoryDisp = findViewById(R.id.categoryDisp);
         categoryDisp.setText(LoginActivity.currentBAcc.getCategory());
+        Button goToProfile1 = findViewById(R.id.pageBtn1);
+        goToProfile1.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               Intent startIntent = new Intent(getApplicationContext(), BusinessPageActivity.class);
+               startActivity(startIntent);
+           }
+        });
 
         //result 2
         ImageView pfp2 = findViewById(R.id.toolbarProfile2);
@@ -39,6 +49,14 @@ public class HomeScreen extends AppCompatActivity {
         stars2.setText(R.string.numStars);
         TextView categoryDisp2 = findViewById(R.id.categoryDisp2);
         categoryDisp2.setText(LoginActivity.currentBAcc.getCategory());
+        Button goToProfile2 = findViewById(R.id.pageBtn2);
+        goToProfile2.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               Intent startIntent = new Intent(getApplicationContext(), BusinessPageActivity.class);
+               startActivity(startIntent);
+           }
+        });
 
         //result 3
         ImageView pfp3 = findViewById(R.id.toolbarProfile3);
@@ -51,6 +69,14 @@ public class HomeScreen extends AppCompatActivity {
         stars3.setText(R.string.numStars);
         TextView categoryDisp3 = findViewById(R.id.categoryDisp3);
         categoryDisp3.setText(LoginActivity.currentBAcc.getCategory());
+        Button goToProfile3 = findViewById(R.id.pageBtn3);
+        goToProfile3.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               Intent startIntent = new Intent(getApplicationContext(), BusinessPageActivity.class);
+               startActivity(startIntent);
+           }
+        });
 
         //result 4
         ImageView pfp4 = findViewById(R.id.toolbarProfile4);
@@ -63,6 +89,14 @@ public class HomeScreen extends AppCompatActivity {
         stars4.setText(R.string.numStars);
         TextView categoryDisp4 = findViewById(R.id.categoryDisp4);
         categoryDisp4.setText(LoginActivity.currentBAcc.getCategory());
+        Button goToProfile4 = findViewById(R.id.pageBtn4);
+        goToProfile4.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               Intent startIntent = new Intent(getApplicationContext(), BusinessPageActivity.class);
+               startActivity(startIntent);
+           }
+        });
 
         //result 5
         ImageView pfp5 = findViewById(R.id.toolbarProfile5);
@@ -75,6 +109,14 @@ public class HomeScreen extends AppCompatActivity {
         stars5.setText(R.string.numStars);
         TextView categoryDisp5 = findViewById(R.id.categoryDisp5);
         categoryDisp5.setText(LoginActivity.currentBAcc.getCategory());
+        Button goToProfile5 = findViewById(R.id.pageBtn5);
+        goToProfile5.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               Intent startIntent = new Intent(getApplicationContext(), BusinessPageActivity.class);
+               startActivity(startIntent);
+           }
+        });
         */
     }
 
