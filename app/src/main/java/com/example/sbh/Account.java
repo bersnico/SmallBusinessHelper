@@ -1,8 +1,10 @@
 package com.example.sbh;
 
+import android.graphics.drawable.Drawable;
+
 import java.util.ArrayList;
 
-public class Account {
+public abstract class Account {
 
 	public static ArrayList<Account> accounts = new ArrayList<Account>();
 	protected static int idNum;
@@ -49,6 +51,14 @@ public class Account {
 
 	public void setLocation(String nAddress){ address = nAddress; }
 
+	public abstract Drawable getPFPIMG();
+
+	public abstract double getRating();
+
+	public abstract String getCategory ();
+
 	public void setPassword(String nPassword){ password = nPassword; }
+
+	public abstract String getName();
 
 }
