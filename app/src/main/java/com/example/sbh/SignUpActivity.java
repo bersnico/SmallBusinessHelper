@@ -11,7 +11,6 @@ import java.util.ArrayList;
 public class SignUpActivity extends AppCompatActivity {
     private static int checkCount = 0;
     public static int idCounter = 0;
-    public ArrayList<Account> accounts = new ArrayList<Account>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,10 +76,10 @@ public class SignUpActivity extends AppCompatActivity {
 
                        // if(!phoneNum.equals("") && !nameOfBusi.equals("")){
 
-                            accounts.add(new BusinessAccount(nameOfBusi, email, initPword, town, phoneNum, category, priceRange, idCounter));
+                            LoginActivity.currentBAcc = new BusinessAccount(nameOfBusi, email, initPword, town, phoneNum, category, priceRange, idCounter);
                             idCounter++;
 
-                            Intent startIntent = new Intent(getApplicationContext(), HomeScreen.class);
+                            Intent startIntent = new Intent(getApplicationContext(), BusinessAccountActivity.class);
                             startActivity(startIntent);
 //                        } else {
 //                            TextView error = findViewById(R.id.checkAll);
@@ -89,7 +88,7 @@ public class SignUpActivity extends AppCompatActivity {
 
                     }
                     else {
-                        accounts.add(new ConsumerAccount(email, initPword, town, idCounter));
+                        LoginActivity.currentCAcc = new ConsumerAccount(email, initPword, town, idCounter);
                         idCounter++;
                         Intent startIntent = new Intent(getApplicationContext(), HomeScreen.class);
                         startActivity(startIntent);

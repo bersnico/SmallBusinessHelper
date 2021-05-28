@@ -17,6 +17,10 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        for (int i = 0; i<Account.accounts.size(); i++) {
+            System.out.print(Account.accounts.get(i).getEmail());
+        }
+
         Button loginButton = findViewById(R.id.loginButton);
 
         loginButton.setOnClickListener(new View.OnClickListener(){
@@ -30,7 +34,7 @@ public class LoginActivity extends AppCompatActivity {
                 Account currentAcc = Account.accounts.get(binarySearchAccountsString(email, 0, Account.accounts.size()-1));
                 //currentAcc = Account.accounts.get(0);
 
-                if(loginPermitted(email, password)){
+                if(loginPermitted(currentAcc, email, password)){
                     if (currentAcc.getUserType()) {
                         currentBAcc = (BusinessAccount) currentAcc;
                         Intent startIntent = new Intent(getApplicationContext(), BusinessAccountActivity.class);
@@ -46,10 +50,10 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
 
-            public boolean loginPermitted(String email, String password){
+            public boolean loginPermitted(Account acct, String email, String password){
                 //if email is found and password is correct, permit login, otherwise do not.
                 //return currentAcc.getPassword().equals(password);
-                return ((binarySearchAccountsString(email, 0, Account.accounts.size() - 1) > -1) && (currentBAcc.getPassword().equals(password) || currentCAcc.getPassword().equals(password)));
+                return ((binarySearchAccountsString(email, 0, Account.accounts.size() - 1) > -1) && (acct.getPassword().equals(password)));
             }
 
 

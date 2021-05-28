@@ -2,6 +2,8 @@ package com.example.sbh;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
@@ -12,25 +14,30 @@ public class HomeScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
-        TabItem home = findViewById(R.id.home);
-        TabItem favs = findViewById(R.id.favs);
-        TabItem profile = findViewById(R.id.profile);
-        TabItem maps = findViewById(R.id.map);
-        TabLayout tabs = findViewById(R.id.tabLayout);
-        int pos = tabs.getSelectedTabPosition();
-        switch (pos){
-            case 0: goHome();
-            break;
 
-            case 1: goFavorites();
-            break;
+        Button favB = findViewById(R.id.favButton);
+        favB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goFavorites();
+            }
+        });
 
-            case 2: goMap();
-            break;
+        Button mapB = findViewById(R.id.mapButton);
+        mapB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goMap();
+            }
+        });
 
-            case 3: goProfile();
-            break;
-        }
+        Button acctB = findViewById(R.id.acctButton);
+        acctB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goProfile();
+            }
+        });
     }
 
     private void goProfile() {
@@ -45,11 +52,6 @@ public class HomeScreen extends AppCompatActivity {
 
     private void goFavorites() {
         Intent startIntent = new Intent(getApplicationContext(), FavoritesActivity.class);
-        startActivity(startIntent);
-    }
-
-    private void goHome() {
-        Intent startIntent = new Intent(getApplicationContext(), HomeScreen.class);
         startActivity(startIntent);
     }
 }

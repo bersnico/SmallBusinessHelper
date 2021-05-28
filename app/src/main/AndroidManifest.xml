@@ -23,7 +23,7 @@
         </activity>
         <activity android:name=".ConsumerAccountActivity">
         </activity>
-        <activity android:name=".BusinessAccountActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -34,7 +34,8 @@
         </activity>
         <activity android:name=".HomeScreen">
         </activity>
-
+        <activity android:name=".FavoritesActivity">
+        </activity>
         <meta-data
                 android:name="com.google.android.gms.ads.APPLICATION_ID"
                 android:value="ca-app-pub-3940256099942544~3347511713"/>
@@ -46,7 +47,7 @@
         </activity>
         <activity android:name=".LoginActivity">
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".BusinessAccountActivity">
 
         </activity>
 

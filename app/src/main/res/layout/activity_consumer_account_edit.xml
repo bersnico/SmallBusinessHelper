@@ -10,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="446dp"
             android:layout_height="786dp"
-            tools:context=".BusinessAccountActivity" android:background="#5103A9F4" android:id="@+id/logout2"
+            tools:context=".BusinessAccountActivity" android:background="#5103A9F4" android:id="@+id/cAcctPg"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent">
 
