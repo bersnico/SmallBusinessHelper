@@ -27,8 +27,8 @@ public class FavoritesActivity extends AppCompatActivity {
         businessName.setText(currentResult.getName());
         TextView addressDisp = findViewById(R.id.addressDisp);
         addressDisp.setText(currentResult.getLocation());
-        TextView stars = findViewById(R.id.stars);
-        stars.setText(currentResult.getRating());
+//        TextView stars = findViewById(R.id.stars);
+//        stars.setText(currentResult.getRating());
         TextView categoryDisp = findViewById(R.id.categoryDisp);
         categoryDisp.setText(currentResult.getCategory());
     }
