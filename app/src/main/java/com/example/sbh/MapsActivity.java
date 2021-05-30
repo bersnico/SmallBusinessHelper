@@ -2,6 +2,7 @@ package com.example.sbh;
 
 import android.Manifest;
 import android.app.Activity;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
@@ -9,6 +10,7 @@ import android.location.Location;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -44,6 +46,14 @@ public class MapsActivity extends Activity implements OnMapReadyCallback {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
 
+        Button returnToHome = findViewById(R.id.button);
+        returnToHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent startIntent = new Intent(getApplicationContext(), HomeScreen.class);
+                startActivity(startIntent);
+            }
+        });
         Bundle mapViewBundle = null;
         if (savedInstanceState != null) {
             mapViewBundle = savedInstanceState.getBundle(MAP_VIEW_BUNDLE_KEY);
@@ -126,9 +136,16 @@ public class MapsActivity extends Activity implements OnMapReadyCallback {
         //String address = LoginActivity.currentBAcc.getLocation();
         String address = "16 Robinson Park, Winchester";
         LatLng bLoc = getLatLangFromAddress(address);
-        gmap.addMarker(new MarkerOptions()
+        Marker businessResult1Mark = gmap.addMarker(new MarkerOptions()
                 .position(bLoc)
                 .title("Marker on business"));
+        businessResult1Mark.setDraggable(false);
+        gmap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+            @Override
+            public boolean onMarkerClick(@NonNull Marker marker) {
+                return false;
+            }
+        });
         gmap.moveCamera(CameraUpdateFactory.newLatLngZoom(bLoc, INITIAL_ZOOM));
     }
     private void enableMyLocation(GoogleMap map) {

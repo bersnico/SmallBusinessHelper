@@ -28,7 +28,7 @@ public class BusinessAccountActivity extends AppCompatActivity {
 
         TextView cFavorites = findViewById(R.id.textView14);
         int currFav = LoginActivity.currentBAcc.getNumFavorites();
-        cFavorites.setText(currFav);
+        cFavorites.setText(String.valueOf(currFav));
 
         TextView cPrice = findViewById(R.id.textView11);
         String currPrice = LoginActivity.currentBAcc.getPriceRange() + "";
