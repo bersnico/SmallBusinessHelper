@@ -18,12 +18,12 @@ public class ConsumerAccountActivity extends AppCompatActivity {
         String currEmail = LoginActivity.currentCAcc.getEmail();
         cEmail.setText(currEmail);
 
-        TextView cLocal = findViewById(R.id.textView11);
+        TextView cLocal = findViewById(R.id.textView15);
         String currLocal = LoginActivity.currentCAcc.getLocation();
         cLocal.setText(currLocal);
 
-        Button logInBtn = findViewById(R.id.logout2);
-        logInBtn.setOnClickListener(new View.OnClickListener() {
+        Button logOutBtn = findViewById(R.id.logout);
+        logOutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent startIntent = new Intent(getApplicationContext(), MainActivity.class);
@@ -35,7 +35,7 @@ public class ConsumerAccountActivity extends AppCompatActivity {
         editBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent startIntent = new Intent(getApplicationContext(), BusinessAccountEditActivity.class);
+                Intent startIntent = new Intent(getApplicationContext(), ConsumerAccountEditActivity.class);
                 startActivity(startIntent);
             }
         });

@@ -5,9 +5,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
-
+import com.google.android.material.tabs.TabItem;
+import com.google.android.material.tabs.TabLayout;
+import android.widget.SearchView;
 import java.util.ArrayList;
-
 
 public class HomeScreen extends AppCompatActivity {
     public static ArrayList<Account> sortedBySearch = new ArrayList<>();
@@ -16,6 +17,30 @@ public class HomeScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
+
+        Button favB = findViewById(R.id.favButton);
+        favB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goFavorites();
+            }
+        });
+
+        Button mapB = findViewById(R.id.mapButton);
+        mapB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goMap();
+            }
+        });
+
+        Button acctB = findViewById(R.id.acctButton);
+        acctB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goProfile();
+            }
+        });
 
         SearchView currSearch = findViewById(R.id.searchView);
         currSearch.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -204,8 +229,4 @@ public class HomeScreen extends AppCompatActivity {
         startActivity(startIntent);
     }
 
-    private void goHome() {
-        Intent startIntent = new Intent(getApplicationContext(), HomeScreen.class);
-        startActivity(startIntent);
-    }
 }
