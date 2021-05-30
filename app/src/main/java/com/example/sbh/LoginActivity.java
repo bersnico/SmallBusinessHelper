@@ -17,10 +17,6 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        for (int i = 0; i<Account.accounts.size(); i++) {
-            System.out.print(Account.accounts.get(i).getEmail());
-        }
-
         Button loginButton = findViewById(R.id.loginButton);
 
         loginButton.setOnClickListener(new View.OnClickListener(){
