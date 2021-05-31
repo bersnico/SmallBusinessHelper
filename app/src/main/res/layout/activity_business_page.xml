@@ -10,14 +10,15 @@
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context=".BusinessAccountActivity" android:background="#7A03A9F4">
+            tools:context=".BusinessAccountActivity" android:background="#7A03A9F4"
+            tools:layout_editor_absoluteY="-16dp" tools:layout_editor_absoluteX="-107dp">
 
         <TextView
                 android:text="@string/email"
                 android:layout_width="208dp"
                 android:layout_height="42dp" android:id="@+id/textView7"
                 app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintHorizontal_bias="0.876" android:textSize="24sp"
+                app:layout_constraintHorizontal_bias="0.876" android:textSize="18sp"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.419" app:layout_constraintBottom_toTopOf="@+id/textView12"/>
         <TextView
@@ -25,40 +26,40 @@
                 android:layout_width="208dp"
                 android:layout_height="42dp" android:id="@+id/textView8"
                 app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintHorizontal_bias="0.876" android:textSize="24sp"
+                app:layout_constraintHorizontal_bias="0.876" android:textSize="18sp"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.269" app:layout_constraintBottom_toTopOf="@+id/textView12"/>
         <TextView
-                android:text="@string/favorites"
+                android:text="@string/favorited_by"
                 android:layout_width="107dp"
                 android:layout_height="36dp" android:id="@+id/textView14"
                 app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintHorizontal_bias="0.042" android:textSize="24sp"
+                app:layout_constraintHorizontal_bias="0.072" android:textSize="24sp"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.828" app:layout_constraintBottom_toTopOf="@+id/textView12"/>
+                app:layout_constraintVertical_bias="0.827" app:layout_constraintBottom_toTopOf="@+id/textView12"/>
         <TextView
                 android:text="@string/category"
-                android:layout_width="107dp"
-                android:layout_height="36dp" android:id="@+id/textView12"
+                android:layout_width="260dp"
+                android:layout_height="33dp" android:id="@+id/textView12"
                 app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintHorizontal_bias="0.042" android:textSize="24sp"
+                app:layout_constraintHorizontal_bias="0.145" android:textSize="24sp"
                 app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintVertical_bias="0.588"/>
+                app:layout_constraintVertical_bias="0.686"/>
         <TextView
                 android:text="@string/location"
-                android:layout_width="107dp"
-                android:layout_height="36dp" android:id="@+id/textView15"
+                android:layout_width="264dp"
+                android:layout_height="39dp" android:id="@+id/textView15"
                 app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintHorizontal_bias="0.052" android:textSize="24sp"
+                app:layout_constraintHorizontal_bias="0.149" android:textSize="24sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintVertical_bias="0.064" app:layout_constraintTop_toBottomOf="@+id/textView12"/>
+                app:layout_constraintVertical_bias="0.212" app:layout_constraintTop_toBottomOf="@+id/textView12"/>
         <TextView
                 android:text="@string/price"
                 android:layout_width="107dp"
                 android:layout_height="36dp" android:id="@+id/textView11"
                 app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintHorizontal_bias="0.042" android:textSize="24sp"
-                app:layout_constraintVertical_bias="0.464" app:layout_constraintBottom_toTopOf="@+id/textView12"
+                app:layout_constraintHorizontal_bias="0.072" android:textSize="24sp"
+                app:layout_constraintVertical_bias="0.583" app:layout_constraintBottom_toTopOf="@+id/textView12"
                 app:layout_constraintTop_toBottomOf="@+id/textView14"/>
         <TextView
                 android:text="@string/business"
@@ -75,44 +76,29 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.497"
-                app:layout_constraintVertical_bias="0.342"/>
-        <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" tools:src="@tools:sample/avatars" android:id="@+id/imageView"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginTop="84dp" app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginBottom="519dp" app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginLeft="16dp" android:layout_marginStart="16dp" android:layout_marginEnd="267dp"
-                android:layout_marginRight="267dp" app:layout_constraintEnd_toEndOf="parent"
-                android:contentDescription="@string/profilepic"/>
+                app:layout_constraintVertical_bias="0.399"/>
         <ImageView
                 android:layout_width="153dp"
                 android:layout_height="186dp" tools:srcCompat="@tools:sample/backgrounds/scenic"
-                android:id="@+id/imageView2" app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginTop="473dp" app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginBottom="45dp" app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginLeft="16dp" android:layout_marginStart="16dp" android:layout_marginEnd="226dp"
-                android:layout_marginRight="226dp" app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.404" app:layout_constraintVertical_bias="0.478"
-                android:contentDescription="@string/uploaded1"/>
+                android:id="@+id/imageView2"
+                android:contentDescription="@string/uploaded1"
+                app:layout_constraintEnd_toStartOf="@+id/textView8" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/ratingBar2"
+                app:layout_constraintTop_toBottomOf="@+id/textView5"/>
         <Button
                 android:text="@string/return_to_search"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/returnToSearch"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginTop="667dp" app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginBottom="16dp" app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginLeft="123dp" android:layout_marginStart="123dp" android:layout_marginEnd="123dp"
-                android:layout_marginRight="123dp" app:layout_constraintEnd_toEndOf="parent"/>
+                app:layout_constraintTop_toBottomOf="@+id/textView15"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
         <CheckBox
                 android:text="@string/my_favorite"
                 android:layout_width="133dp"
                 android:layout_height="61dp" android:id="@+id/checkFavorite"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginTop="296dp" app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginLeft="160dp" android:layout_marginStart="160dp"
-                app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="373dp"
-                app:layout_constraintVertical_bias="0.0" android:layout_marginEnd="118dp"
-                android:layout_marginRight="118dp" app:layout_constraintEnd_toEndOf="parent"/>
+                app:layout_constraintBottom_toTopOf="@+id/textView12"
+                android:layout_marginBottom="32dp" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView14"
+                app:layout_constraintTop_toBottomOf="@+id/ratingBar2"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

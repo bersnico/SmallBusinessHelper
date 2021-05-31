@@ -17,7 +17,9 @@ public abstract class Account {
 		this.address=address;
 		idNum = idNumb;
 		accounts.add(this);
-		insertionSort();
+		if(accounts.size()>1){
+			insertionSort();
+		}
 	}
 
 	public void insertionSort(){

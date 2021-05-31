@@ -143,6 +143,11 @@ public class MapsActivity extends Activity implements OnMapReadyCallback {
         gmap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
             @Override
             public boolean onMarkerClick(@NonNull Marker marker) {
+                if(marker == businessResult1Mark) {
+                    LoginActivity.currentBAcc = HomeScreen.sortedBySearch.get(0);
+                }
+                Intent startIntent = new Intent(getApplicationContext(), BusinessPageActivity.class);
+                startActivity(startIntent);
                 return false;
             }
         });

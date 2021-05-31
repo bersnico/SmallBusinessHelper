@@ -9,15 +9,18 @@ import android.os.Bundle;
 
 
 public class MainActivity extends AppCompatActivity {
+    public static int count = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        if(count ==0){
+            Account acct1 = new BusinessAccount("Test", "psegovia04@gmail.com", "hello123", "225 Washington", "6179991108", "Tiles", 2, 0);
+            Account acct2 = new ConsumerAccount("psegovia@bbns.org", "hello1234", "Mass", 1);
+        }
+        count++;
         Button logInBtn = findViewById(R.id.login2);
-        Account acct1 = new BusinessAccount("Test", "psegovia04@gmail.com", "hello123", "225 Washington", "6179991108", "Tiles", 2, 0);
-        Account acct2 = new ConsumerAccount("psegovia@bbns.org", "hello1234", "Mass", 1);
-
         logInBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
