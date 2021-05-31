@@ -37,13 +37,9 @@ public class BusinessAccountEditActivity extends AppCompatActivity {
         String currPhone = LoginActivity.currentBAcc.getNumber();
         cPhone.setText(currPhone);
 
-        TextView cFavorites = findViewById(R.id.textView14);
-        int currFav = LoginActivity.currentBAcc.getNumFavorites();
-        cFavorites.setText(currFav);
-
         TextView cPrice = findViewById(R.id.editprice);
         String currPrice = LoginActivity.currentBAcc.getPriceRange() + "";
-        cBName.setText(currBName);
+        cPrice.setText(currBName);
 
         TextView cCat = findViewById(R.id.editCat);
         String currCat = LoginActivity.currentBAcc.getCategory();

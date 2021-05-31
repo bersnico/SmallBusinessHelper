@@ -6,22 +6,42 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MapsActivity">
+
     <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/White">
+            android:background="@color/White" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" android:id="@+id/relativeLayout">
 
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:weightSum="100"
-                android:background="@color/White" android:paddingTop="329dp">
+                android:background="@color/White">
 
-
+            <androidx.appcompat.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/colorPrimary"
+                    android:theme="?attr/actionBarTheme"
+                    android:minHeight="?attr/actionBarSize" android:id="@+id/toolbar2">
+                <Button
+                        android:text="@string/back_to_home"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/button"
+                        app:cornerRadius="10dp"/>
+                <Button
+                        android:text="@string/show_search_results_on_map"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content" android:id="@+id/button3" app:cornerRadius="10dp"
+                        android:translationX="90dp"/>
+            </androidx.appcompat.widget.Toolbar>
             <com.google.android.gms.maps.MapView
                     android:layout_width="match_parent"
-                    android:layout_height="403dp"
+                    android:layout_height="675dp"
                     android:id="@+id/user_list_map"/>
 
 
