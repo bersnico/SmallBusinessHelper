@@ -31,6 +31,8 @@ public class FavoritesActivity extends AppCompatActivity {
         stars.setText(currentResult.getRating());
         TextView categoryDisp = findViewById(R.id.categoryDisp);
         categoryDisp.setText(currentResult.getCategory());
+
+
     }
 
 }
