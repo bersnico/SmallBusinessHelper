@@ -6,7 +6,7 @@ import android.graphics.drawable.Drawable;
 import java.util.ArrayList;
 
 public class BusinessAccount extends Account{
-
+	public static ArrayList<BusinessAccount> businessAccounts = new ArrayList<BusinessAccount>();
 	private String category;
 	private final String email;
 	private String phoneNumber;
@@ -34,6 +34,7 @@ public class BusinessAccount extends Account{
 		rating = 0;
 		ratings = new ArrayList<Double>();
 		numFavorites=0;
+		businessAccounts.add(this);
 	}
 
 	public String getName() {

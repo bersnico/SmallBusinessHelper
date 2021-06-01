@@ -61,6 +61,12 @@
     <string name="numStars">Number of Stars: **add this**</string>
     <string name="my_favorite">My Favorite</string>
     <string name="go_to_page">Go to Page</string>
-    <string name="alreadyExists">An account under this email already exists. Please log in instead.</string>
-
+    <string name="favs">favs</string>
+    <string name="account">account</string>
+    <string name="acct">acct</string>
+    <string name="maps">maps</string>
+    <string name="favorite">favorite</string>
+    <string name="back_to_home">Back to Home</string>
+    <string name="show_search_results_on_map">Show Search Results on Map</string>
+    <string name="favorited_by">Favorited by:</string>
 </resources>

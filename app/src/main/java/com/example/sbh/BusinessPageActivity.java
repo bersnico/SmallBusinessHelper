@@ -1,8 +1,8 @@
 package com.example.sbh;
 
-import android.widget.CheckBox;
-import android.widget.RatingBar;
-import android.widget.TextView;
+import android.content.Intent;
+import android.view.View;
+import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -36,7 +36,7 @@ public class BusinessPageActivity extends AppCompatActivity {
 
         TextView cFavorites = findViewById(R.id.textView14);
         int currFav = LoginActivity.currentBAcc.getNumFavorites();
-        cFavorites.setText(currFav);
+        cFavorites.setText(String.valueOf(currFav));
 
         TextView cPrice = findViewById(R.id.textView11);
         String currPrice = LoginActivity.currentBAcc.getPriceRange() + "";
@@ -51,8 +51,23 @@ public class BusinessPageActivity extends AppCompatActivity {
         cLoc.setText(currLoc);
 
         CheckBox checkBox = findViewById(R.id.checkFavorite);
-        if(checkBox.isChecked()){
-            LoginActivity.currentBAcc.incrementNumFavorites(1);
-        }
+        //#TODO add fav fixes here pablo
+        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(checkBox.isChecked()){
+                    LoginActivity.currentBAcc.incrementNumFavorites(1);
+                }
+            }
+        });
+        Button returnToSearch = findViewById(R.id.returnToSearch);
+        returnToSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent startIntent = new Intent(getApplicationContext(), HomeScreen.class);
+                startActivity(startIntent);
+            }
+        });
+
     }
 }

@@ -1,17 +1,20 @@
 package com.example.sbh;
 
+import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+import android.provider.BaseColumns;
 import android.view.View;
 import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
 
 import java.util.ArrayList;
 
 public class SignUpActivity extends AppCompatActivity {
     private static int checkCount = 0;
     public static int idCounter = 0;
-    public ArrayList<Account> accounts = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,11 +67,6 @@ public class SignUpActivity extends AppCompatActivity {
 
                 }
 
-                if(binarySearchAccountsString(email, 0, accounts.size())>=0){
-                    TextView error = findViewById(R.id.alreadyFound);
-                    error.setVisibility(View.VISIBLE);
-                }
-
                 if(initPword.equals(reentered) && initPword.length()>7 && !email.equals("") && !town.equals("")) {
                     if (checkBox.isChecked()) {
                         EditText phone = findViewById(R.id.editTextPhone);
@@ -82,10 +80,10 @@ public class SignUpActivity extends AppCompatActivity {
 
                        // if(!phoneNum.equals("") && !nameOfBusi.equals("")){
 
-                            accounts.add(new BusinessAccount(nameOfBusi, email, initPword, town, phoneNum, category, priceRange, idCounter));
+                            LoginActivity.currentBAcc = new BusinessAccount(nameOfBusi, email, initPword, town, phoneNum, category, priceRange, idCounter);
                             idCounter++;
 
-                            Intent startIntent = new Intent(getApplicationContext(), HomeScreen.class);
+                            Intent startIntent = new Intent(getApplicationContext(), BusinessAccountActivity.class);
                             startActivity(startIntent);
 //                        } else {
 //                            TextView error = findViewById(R.id.checkAll);
@@ -94,7 +92,7 @@ public class SignUpActivity extends AppCompatActivity {
 
                     }
                     else {
-                        accounts.add(new ConsumerAccount(email, initPword, town, idCounter));
+                        LoginActivity.currentCAcc = new ConsumerAccount(email, initPword, town, idCounter);
                         idCounter++;
                         Intent startIntent = new Intent(getApplicationContext(), HomeScreen.class);
                         startActivity(startIntent);
@@ -113,25 +111,7 @@ public class SignUpActivity extends AppCompatActivity {
             }
         });
     }
-    public int binarySearchAccountsString(String email, int l, int r){
 
-        if (r >= l)
-        {
-            int mid = l + (r - l) / 2;
-
-            if (Account.accounts.get(mid).getEmail().compareTo(email) == 0)
-                return mid;
-
-            if (Account.accounts.get(mid).getEmail().compareTo(email) > 0)
-                return binarySearchAccountsString(email, l, mid - 1);
-
-            return binarySearchAccountsString(email, mid + 1, r);
-        }
-
-        // We reach here when element is not present
-        // in array
-        return -1;
-    }
 
 }
 //    public static boolean isValidEmail(CharSequence target) {

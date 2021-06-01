@@ -7,6 +7,49 @@
         android:layout_height="match_parent"
         tools:context=".HomeScreen" android:background="#7A03A9F4">
 
+    <Button
+            android:text="@string/favorite"
+            android:layout_width="95dp"
+            android:layout_height="58dp" android:id="@+id/favButton"
+            app:backgroundTint="#FFFFFF" android:textColor="?attr/colorPrimary"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+            app:layout_constraintVertical_bias="0.0" app:layout_constraintStart_toEndOf="@+id/homeButton"
+            android:layout_marginLeft="4dp" android:layout_marginStart="4dp" android:layout_marginBottom="2dp"
+            android:textSize="12sp"/>
+
+    <Button
+            android:text="@string/home"
+            android:layout_width="95dp"
+            android:layout_height="58dp" android:id="@+id/homeButton"
+            app:backgroundTint="#FFFFFF" android:textColor="?attr/colorPrimary"
+            app:layout_constraintTop_toTopOf="@+id/toolbar" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+            android:layout_marginLeft="10dp" android:layout_marginStart="10dp"
+            android:textSize="12sp"/>
+
+
+    <Button
+            android:text="@string/account"
+            android:layout_width="95dp"
+            android:layout_height="58dp" android:id="@+id/acctButton"
+            app:backgroundTint="#FFFFFF" android:textColor="?attr/colorPrimary"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+            app:layout_constraintVertical_bias="0.0" app:layout_constraintStart_toEndOf="@+id/mapButton"
+            android:textSize="12sp"
+            android:layout_marginLeft="4dp" android:layout_marginStart="4dp" android:layout_marginBottom="2dp"/>
+
+    <Button
+            android:text="@string/maps"
+            android:layout_width="95dp"
+            android:layout_height="58dp" android:id="@+id/mapButton"
+            app:backgroundTint="#FFFFFF" android:textColor="?attr/colorPrimary"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+            app:layout_constraintVertical_bias="0.0" app:layout_constraintStart_toEndOf="@+id/favButton"
+            android:layout_marginLeft="4dp" android:layout_marginStart="4dp" android:layout_marginBottom="2dp"
+            android:textSize="12sp"/>
     <TextView
             android:text="@string/home"
             android:layout_width="193dp"
@@ -48,20 +91,21 @@
                 <TextView android:layout_width="200dp" android:layout_height="25dp" android:id="@+id/BusinessName"
                           android:translationX="105dp" android:translationY="20dp"
                           android:text="@string/business_name" android:textColor="#191818"/>
-                <TextView android:layout_width="200dp" android:layout_height="25dp" android:id="@+id/stars"
-                          android:translationX="10dp" android:translationY="105dp" android:text="@string/number_of_stars"
-                          android:textColor="#0C0A0A"/>
                 <TextView android:layout_width="200dp" android:layout_height="25dp" android:id="@+id/addressDisp"
                           android:translationX="105dp" android:translationY="67dp" android:text="@string/address"
                           android:textColor="#0C0A0A"/>
                 <TextView android:layout_width="200dp" android:layout_height="25dp" android:id="@+id/categoryDisp"
-                          android:translationX="10dp" android:translationY="140dp" android:text="@string/category"
+                          android:translationX="10dp" android:translationY="110dp" android:text="@string/category"
                           android:textColor="#0C0A0A"/>
                 <Button
                         android:text="@string/go_to_page"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" android:id="@+id/pageBtn1" android:translationX="220dp"
                         android:translationY="110dp"/>
+                <RatingBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp" android:id="@+id/ratingBar" android:translationX="10dp"
+                        android:translationY="150dp"/>
 
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="200dp"
@@ -81,15 +125,16 @@
                 <TextView android:layout_width="200dp" android:layout_height="25dp" android:id="@+id/BusinessName2"
                           android:translationX="105dp" android:translationY="20dp"
                           android:text="@string/business_name" android:textColor="#191818"/>
-                <TextView android:layout_width="200dp" android:layout_height="25dp" android:id="@+id/stars2"
-                          android:translationX="10dp" android:translationY="105dp" android:text="@string/number_of_stars"
-                          android:textColor="#0C0A0A"/>
                 <TextView android:layout_width="200dp" android:layout_height="25dp" android:id="@+id/addressDisp2"
                           android:translationX="105dp" android:translationY="67dp" android:text="@string/address"
                           android:textColor="#0C0A0A"/>
                 <TextView android:layout_width="200dp" android:layout_height="25dp" android:id="@+id/categoryDisp2"
-                          android:translationX="10dp" android:translationY="140dp" android:text="@string/category"
+                          android:translationX="10dp" android:translationY="110dp" android:text="@string/category"
                           android:textColor="#0C0A0A"/>
+                <RatingBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp" android:id="@+id/ratingBar2" android:translationX="10dp"
+                        android:translationY="150dp"/>
 
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="200dp"
@@ -109,15 +154,16 @@
                 <TextView android:layout_width="200dp" android:layout_height="25dp" android:id="@+id/BusinessName3"
                           android:translationX="105dp" android:translationY="20dp"
                           android:text="@string/business_name" android:textColor="#191818"/>
-                <TextView android:layout_width="200dp" android:layout_height="25dp" android:id="@+id/stars3"
-                          android:translationX="10dp" android:translationY="105dp" android:text="@string/number_of_stars"
-                          android:textColor="#0C0A0A"/>
                 <TextView android:layout_width="200dp" android:layout_height="25dp" android:id="@+id/addressDisp3"
                           android:translationX="105dp" android:translationY="67dp" android:text="@string/address"
                           android:textColor="#0C0A0A"/>
                 <TextView android:layout_width="200dp" android:layout_height="25dp" android:id="@+id/categoryDisp3"
-                          android:translationX="10dp" android:translationY="140dp" android:text="@string/category"
+                          android:translationX="10dp" android:translationY="110dp" android:text="@string/category"
                           android:textColor="#0C0A0A"/>
+                <RatingBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp" android:id="@+id/ratingBar3" android:translationX="10dp"
+                        android:translationY="150dp"/>
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="200dp"
                                                app:cardCornerRadius="10dp" app:cardElevation="10dp" android:id="@+id/bx4">
@@ -136,15 +182,16 @@
                 <TextView android:layout_width="200dp" android:layout_height="25dp" android:id="@+id/BusinessName4"
                           android:translationX="105dp" android:translationY="20dp"
                           android:text="@string/business_name" android:textColor="#191818"/>
-                <TextView android:layout_width="200dp" android:layout_height="25dp" android:id="@+id/stars4"
-                          android:translationX="10dp" android:translationY="105dp" android:text="@string/number_of_stars"
-                          android:textColor="#0C0A0A"/>
                 <TextView android:layout_width="200dp" android:layout_height="25dp" android:id="@+id/addressDisp4"
                           android:translationX="105dp" android:translationY="67dp" android:text="@string/address"
                           android:textColor="#0C0A0A"/>
                 <TextView android:layout_width="200dp" android:layout_height="25dp" android:id="@+id/categoryDisp4"
-                          android:translationX="10dp" android:translationY="140dp" android:text="@string/category"
+                          android:translationX="10dp" android:translationY="110dp" android:text="@string/category"
                           android:textColor="#0C0A0A"/>
+                <RatingBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp" android:id="@+id/ratingBar4" android:translationX="10dp"
+                        android:translationY="150dp"/>
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="200dp"
                                                app:cardCornerRadius="10dp" app:cardElevation="10dp" android:id="@+id/bx5">
@@ -163,17 +210,27 @@
                 <TextView android:layout_width="200dp" android:layout_height="25dp" android:id="@+id/BusinessName5"
                           android:translationX="105dp" android:translationY="20dp"
                           android:text="@string/business_name" android:textColor="#191818"/>
-                <TextView android:layout_width="200dp" android:layout_height="25dp" android:id="@+id/stars5"
-                          android:translationX="10dp" android:translationY="105dp" android:text="@string/number_of_stars"
-                          android:textColor="#0C0A0A"/>
                 <TextView android:layout_width="200dp" android:layout_height="25dp" android:id="@+id/addressDisp5"
                           android:translationX="105dp" android:translationY="67dp" android:text="@string/address"
                           android:textColor="#0C0A0A"/>
                 <TextView android:layout_width="200dp" android:layout_height="25dp" android:id="@+id/categoryDisp5"
-                          android:translationX="10dp" android:translationY="140dp" android:text="@string/category"
+                          android:translationX="10dp" android:translationY="110dp" android:text="@string/category"
                           android:textColor="#0C0A0A"/>
+                <RatingBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp" android:id="@+id/ratingBar5" android:translationX="10dp"
+                        android:translationY="150dp"/>
             </androidx.cardview.widget.CardView>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
+    <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:theme="?attr/actionBarTheme"
+            android:minHeight="?attr/actionBarSize" android:id="@+id/toolbar"
+            app:layout_constraintBottom_toTopOf="@+id/textView4" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.0"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -28,11 +28,11 @@ public class BusinessAccountActivity extends AppCompatActivity {
 
         TextView cFavorites = findViewById(R.id.textView14);
         int currFav = LoginActivity.currentBAcc.getNumFavorites();
-        cFavorites.setText(currFav);
+        cFavorites.setText(String.valueOf(currFav));
 
         TextView cPrice = findViewById(R.id.textView11);
         String currPrice = LoginActivity.currentBAcc.getPriceRange() + "";
-        cBName.setText(currBName);
+        cPrice.setText(currPrice);
 
         TextView cCat = findViewById(R.id.textView12);
         String currCat = LoginActivity.currentBAcc.getCategory();
@@ -41,6 +41,7 @@ public class BusinessAccountActivity extends AppCompatActivity {
         TextView cLoc = findViewById(R.id.textView15);
         String currLoc = LoginActivity.currentBAcc.getLocation();
         cLoc.setText(currLoc);
+
 
         Button edit = findViewById(R.id.edit);
         edit.setOnClickListener(new View.OnClickListener() {
