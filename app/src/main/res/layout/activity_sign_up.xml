@@ -16,7 +16,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextCategory"
             app:layout_constraintVertical_bias="0.11"
-            android:hint="@string/enter_price_range_1_4" android:autofillHints="" android:inputType="textPersonName"
+            android:hint="@string/enter_price_range_1_4" android:autofillHints=""
+            android:inputType="number"
             app:layout_constraintHorizontal_bias="0.495" android:cursorVisible="true"
             android:fadingEdge="horizontal|vertical" android:visibility="invisible" android:background="#36594B4B"
             android:fontFamily="@font/fenix"/>

@@ -101,6 +101,11 @@
                         android:text="@string/go_to_page"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" android:id="@+id/pageBtn1" android:translationX="220dp"
+                        android:translationY="110dp" android:background="#FFFFFF"/>
+                <Button
+                        android:text="@string/go_to_page"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/pageBtn" android:translationX="220dp"
                         android:translationY="110dp"/>
                 <RatingBar
                         android:layout_width="wrap_content"
