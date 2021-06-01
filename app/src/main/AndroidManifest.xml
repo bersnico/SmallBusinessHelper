@@ -9,9 +9,9 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
     <application
-            android:icon="@mipmap/ic_launcher"
-            android:label="@string/app_name"
-            android:roundIcon="@mipmap/ic_launcher_round"
+            android:icon="@mipmap/ep"
+            android:label="@string/epages"
+            android:roundIcon="@mipmap/ep_round"
             android:supportsRtl="true"
             android:theme="@style/Theme.SBH"
             android:usesCleartextTraffic="true" >

@@ -51,6 +51,9 @@ public class SignUpActivity extends AppCompatActivity {
         signUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                TextView error = findViewById(R.id.checkAll);
+                error.setVisibility(View.GONE);
+
                 EditText emailText = findViewById(R.id.editTextTextEmailAddress);
                 String email = emailText.getText().toString();
                 EditText origPword = findViewById(R.id.editTextTextPassword);
@@ -62,12 +65,16 @@ public class SignUpActivity extends AppCompatActivity {
 
                 if(email.equals("") || initPword.equals("") || reentered.equals("") || town.equals("")){
 
-                    TextView error = findViewById(R.id.checkAll);
+                    error = findViewById(R.id.checkAll);
                     error.setVisibility(View.VISIBLE);
 
                 }
 
-                if(initPword.equals(reentered) && initPword.length()>7 && !email.equals("") && !town.equals("")) {
+                boolean emailExists = false;
+                if (binarySearchAccountsString(email, 0, Account.accounts.size() - 1) > -1)
+                    emailExists = true;
+
+                if(initPword.equals(reentered) && initPword.length()>7 && !email.equals("") && !town.equals("") && !emailExists) {
                     if (checkBox.isChecked()) {
                         EditText phone = findViewById(R.id.editTextPhone);
                         String phoneNum = phone.getText().toString();
@@ -76,19 +83,34 @@ public class SignUpActivity extends AppCompatActivity {
                         EditText cat = findViewById(R.id.editTextCategory);
                         String category = cat.getText().toString();
                         EditText price = findViewById(R.id.editTextPriceRange);
-                        int priceRange = Integer.parseInt(price.getText().toString());
+                        String priceRange = price.getText().toString();
 
-                       // if(!phoneNum.equals("") && !nameOfBusi.equals("")){
+                        if(!nameOfBusi.equals("") && !category.equals("") && !priceRange.equals("") && !phoneNum.equals("") && phoneNum.length() == 9){
 
-                            LoginActivity.currentBAcc = new BusinessAccount(nameOfBusi, email, initPword, town, phoneNum, category, priceRange, idCounter);
-                            idCounter++;
+                            int priceRangeInt = Integer.parseInt(price.getText().toString());
 
-                            Intent startIntent = new Intent(getApplicationContext(), BusinessAccountActivity.class);
-                            startActivity(startIntent);
-//                        } else {
-//                            TextView error = findViewById(R.id.checkAll);
-//                            error.setVisibility(View.VISIBLE);
-//                        }
+                            if (priceRangeInt > 0 && priceRangeInt < 5) {
+                                LoginActivity.currentBAcc = new BusinessAccount(nameOfBusi, email, initPword, town, phoneNum, category, priceRangeInt, idCounter);
+                                idCounter++;
+
+                                Intent startIntent = new Intent(getApplicationContext(), BusinessAccountActivity.class);
+                                startActivity(startIntent);
+                            } else {
+                                price.setText("");
+                                price.setHint("Enter number between 1-4 (inclusive)");
+                            }
+                        } else {
+
+                            if (!(phoneNum.length() == 9)){
+                                phone.setText("");
+                                phone.setHint("Enter valid phone number (9 numbers)");
+                            }
+
+                            if (!nameOfBusi.equals("") || !category.equals("") || !priceRange.equals("") || !phoneNum.equals("")) {
+                                error = findViewById(R.id.checkAll);
+                                error.setVisibility(View.VISIBLE);
+                            }
+                        }
 
                     }
                     else {
@@ -99,6 +121,12 @@ public class SignUpActivity extends AppCompatActivity {
                     }
                 }
                 else{
+
+                    if(emailExists){
+                        emailText.setText("");
+                        emailText.setHint("This email is already in use.");
+                    }
+
                     if(initPword.length()<8){
                         doubleCheck.setText("");
                         doubleCheck.setHint(R.string.minChars);
@@ -110,8 +138,29 @@ public class SignUpActivity extends AppCompatActivity {
                 }
             }
         });
+
+
     }
 
+    public int binarySearchAccountsString(String email, int l, int r){
+
+        if (r >= l)
+        {
+            int mid = l + (r - l) / 2;
+
+            if (Account.accounts.get(mid).getEmail().compareTo(email) == 0)
+                return mid;
+
+            if (Account.accounts.get(mid).getEmail().compareTo(email) > 0)
+                return binarySearchAccountsString(email, l, mid - 1);
+
+            return binarySearchAccountsString(email, mid + 1, r);
+        }
+
+        // We reach here when element is not present
+        // in array
+        return -1;
+    }
 
 }
 //    public static boolean isValidEmail(CharSequence target) {
