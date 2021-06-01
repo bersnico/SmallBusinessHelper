@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        if(count ==0){
+        if(count == 0){
             Account acct1 = new BusinessAccount("Test", "psegovia04@gmail.com", "hello123", "225 Washington", "6179991108", "Tiles", 2, 0);
             Account acct2 = new ConsumerAccount("psegovia@bbns.org", "hello1234", "Mass", 1);
         }

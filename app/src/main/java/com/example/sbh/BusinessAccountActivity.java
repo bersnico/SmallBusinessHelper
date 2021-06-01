@@ -15,7 +15,7 @@ public class BusinessAccountActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_business_account);
 
-        RatingBar ratingBar2 = findViewById(R.id.ratingBar3);
+        RatingBar ratingBar2 = findViewById(R.id.ratingBar2);
         ratingBar2.setRating((float) LoginActivity.currentBAcc.getRating());
 
         TextView cBName = findViewById(R.id.textView6);
