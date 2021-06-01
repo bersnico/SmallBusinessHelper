@@ -5,8 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
-import com.google.android.material.tabs.TabItem;
-import com.google.android.material.tabs.TabLayout;
 import android.widget.SearchView;
 import java.util.ArrayList;
 
@@ -70,15 +68,15 @@ public class HomeScreen extends AppCompatActivity {
         //result 1
         if(1<=sortedBySearch.size()) {
             currentResult = sortedBySearch.get(0);
-            ImageView pfp = findViewById(R.id.toolbarProfile);
+            ImageView pfp = findViewById(R.id.toolbarProfile3);
             pfp.setImageDrawable(currentResult.getPFPIMG());
-            TextView businessName = findViewById(R.id.BusinessName);
+            TextView businessName = findViewById(R.id.BusinessName3);
             businessName.setText(currentResult.getName());
-            TextView addressDisp = findViewById(R.id.addressDisp);
+            TextView addressDisp = findViewById(R.id.addressDisp3);
             addressDisp.setText(currentResult.getLocation());
-            RatingBar stars = findViewById(R.id.ratingBar);
+            RatingBar stars = findViewById(R.id.ratingBar1);
             stars.setRating((float) currentResult.getRating());
-            TextView categoryDisp = findViewById(R.id.categoryDisp);
+            TextView categoryDisp = findViewById(R.id.categoryDisp1);
             categoryDisp.setText(currentResult.getCategory());
             Button goToProfile1 = findViewById(R.id.pageBtn1);
             goToProfile1.setOnClickListener(new View.OnClickListener() {
@@ -97,15 +95,15 @@ public class HomeScreen extends AppCompatActivity {
             currentResult = sortedBySearch.get(1);
             ImageView pfp2 = findViewById(R.id.toolbarProfile2);
             pfp2.setImageDrawable(currentResult.getPFPIMG());
-            TextView businessName2 = findViewById(R.id.BusinessName2);
+            TextView businessName2 = findViewById(R.id.BusinessName3);
             businessName2.setText(currentResult.getName());
-            TextView addressDisp2 = findViewById(R.id.addressDisp2);
+            TextView addressDisp2 = findViewById(R.id.addressDisp3);
             addressDisp2.setText(currentResult.getLocation());
-            RatingBar stars2 = findViewById(R.id.ratingBar2);
+            RatingBar stars2 = findViewById(R.id.ratingBar3);
             stars2.setRating((float) currentResult.getRating());
-            TextView categoryDisp2 = findViewById(R.id.categoryDisp2);
+            TextView categoryDisp2 = findViewById(R.id.categoryDisp3);
             categoryDisp2.setText(currentResult.getCategory());
-            Button goToProfile2 = findViewById(R.id.pageBtn2);
+            Button goToProfile2 = findViewById(R.id.pageBtn3);
             goToProfile2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

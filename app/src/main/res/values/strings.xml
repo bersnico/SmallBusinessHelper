@@ -69,4 +69,5 @@
     <string name="back_to_home">Back to Home</string>
     <string name="show_search_results_on_map">Show Search Results on Map</string>
     <string name="favorited_by">Favorited by:</string>
+    <string name="return_to_home">Return To Home</string>
 </resources>
