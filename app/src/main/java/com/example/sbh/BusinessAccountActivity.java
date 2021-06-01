@@ -17,6 +17,7 @@ public class BusinessAccountActivity extends AppCompatActivity {
 
         RatingBar ratingBar2 = findViewById(R.id.ratingBar2);
         ratingBar2.setRating((float) LoginActivity.currentBAcc.getRating());
+        ratingBar2.setIsIndicator(true);
 
         TextView cBName = findViewById(R.id.textView6);
         String currBName = LoginActivity.currentBAcc.getName();
