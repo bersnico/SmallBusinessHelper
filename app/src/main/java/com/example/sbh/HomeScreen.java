@@ -49,7 +49,7 @@ public class HomeScreen extends AppCompatActivity {
         TextView addressDisp = findViewById(R.id.addressDisp);
         addressDisp.setText(currentResult.getLocation());
         TextView stars = findViewById(R.id.stars);
-        stars.setText(currentResult.getRating());
+        stars.setText(String.valueOf(currentResult.getRating()));
         TextView categoryDisp = findViewById(R.id.categoryDisp);
         categoryDisp.setText(currentResult.getCategory());
 
@@ -63,7 +63,7 @@ public class HomeScreen extends AppCompatActivity {
         TextView addressDisp2 = findViewById(R.id.addressDisp2);
         addressDisp2.setText(currentResult.getLocation());
         TextView stars2 = findViewById(R.id.stars2);
-        stars2.setText(currentResult.getRating());
+        stars2.setText(String.valueOf(currentResult.getRating()));
         TextView categoryDisp2 = findViewById(R.id.categoryDisp2);
         categoryDisp2.setText(currentResult.getCategory());
 
@@ -76,7 +76,7 @@ public class HomeScreen extends AppCompatActivity {
         TextView addressDisp3 = findViewById(R.id.addressDisp3);
         addressDisp3.setText(currentResult.getLocation());
         TextView stars3 = findViewById(R.id.stars3);
-        stars3.setText(currentResult.getRating());
+        stars3.setText(String.valueOf(currentResult.getRating()));
         TextView categoryDisp3 = findViewById(R.id.categoryDisp3);
         categoryDisp3.setText(currentResult.getCategory());
 
@@ -89,7 +89,7 @@ public class HomeScreen extends AppCompatActivity {
         TextView addressDisp4 = findViewById(R.id.addressDisp4);
         addressDisp4.setText(currentResult.getLocation());
         TextView stars4 = findViewById(R.id.stars4);
-        stars4.setText(currentResult.getRating());
+        stars4.setText(String.valueOf(currentResult.getRating()));
         TextView categoryDisp4 = findViewById(R.id.categoryDisp4);
         categoryDisp4.setText(currentResult.getCategory());
 
@@ -102,18 +102,15 @@ public class HomeScreen extends AppCompatActivity {
         TextView addressDisp5 = findViewById(R.id.addressDisp5);
         addressDisp5.setText(currentResult.getLocation());
         TextView stars5 = findViewById(R.id.stars5);
-        stars5.setText(currentResult.getRating());
+        stars5.setText(String.valueOf(currentResult.getRating()));
         TextView categoryDisp5 = findViewById(R.id.categoryDisp5);
         categoryDisp5.setText(currentResult.getCategory());
     }
 
     private static ArrayList<Account> updateSearches(String search){
 
-
-
         Account current;
         Account prev = Account.accounts.get(0);
-
 
         for(int i = 0; i<Account.accounts.size(); i++) {
             current = Account.accounts.get(i);

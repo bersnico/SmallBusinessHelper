@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="alreadyFound" type="id">An account is already registered under this email. Please log in instead.</item>
+</resources>
