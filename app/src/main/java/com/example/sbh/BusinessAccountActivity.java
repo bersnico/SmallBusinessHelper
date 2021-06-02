@@ -29,11 +29,24 @@ public class BusinessAccountActivity extends AppCompatActivity {
 
         TextView cFavorites = findViewById(R.id.textView14);
         int currFav = LoginActivity.currentBAcc.getNumFavorites();
-        cFavorites.setText(String.valueOf(currFav));
+        cFavorites.setText(new StringBuilder().append(getString(R.string.timesFavs)).append(String.valueOf(currFav)).toString());
 
         TextView cPrice = findViewById(R.id.textView11);
-        String currPrice = LoginActivity.currentBAcc.getPriceRange() + "";
-        cPrice.setText(currPrice);
+        int currPrice = LoginActivity.currentBAcc.getPriceRange();
+        String cPriceR ="";
+        if(currPrice==1){
+            cPriceR="$";
+        }
+        if(currPrice==2){
+            cPriceR="$$";
+        }
+        if(currPrice==3){
+            cPriceR="$$$";
+        }
+        if(currPrice>=3){
+            cPriceR="$$$$";
+        }
+        cPrice.setText(new StringBuilder().append(getString(R.string.priceR)).append(cPriceR).toString());
 
         TextView cCat = findViewById(R.id.textView12);
         String currCat = LoginActivity.currentBAcc.getCategory();

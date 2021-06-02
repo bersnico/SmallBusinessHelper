@@ -22,26 +22,33 @@ public class LoginActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener(){
 
             public void onClick(View v){
+                TextView error = findViewById(R.id.loginCheck);
+                error.setVisibility(View.GONE);
                 //create reference variable for the email at this instance state
                 String email = ((EditText) findViewById(R.id.editTextTextEmailAddress)).getText().toString();
                 //do the same for the entered password
                 String password = ((EditText) findViewById(R.id.editTextTextPassword)).getText().toString();
+                int index = binarySearchAccountsString(email, 0, Account.accounts.size()-1);
+                if(index!=-1) {
+                    Account currentAcc = Account.accounts.get(index);
 
-                Account currentAcc = Account.accounts.get(binarySearchAccountsString(email, 0, Account.accounts.size()-1));
-                //currentAcc = Account.accounts.get(0);
+                    //currentAcc = Account.accounts.get(0);
 
-                if(loginPermitted(currentAcc, email, password)){
-                    if (currentAcc.getUserType()) {
-                        currentBAcc = (BusinessAccount) currentAcc;
-                        Intent startIntent = new Intent(getApplicationContext(), BusinessAccountActivity.class);
-                        startActivity(startIntent);
+                    if (loginPermitted(currentAcc, email, password)) {
+                        if (currentAcc.getUserType()) {
+                            currentBAcc = (BusinessAccount) currentAcc;
+                            Intent startIntent = new Intent(getApplicationContext(), BusinessAccountActivity.class);
+                            startActivity(startIntent);
+                        } else {
+                            currentCAcc = (ConsumerAccount) currentAcc;
+                            Intent startIntent = new Intent(getApplicationContext(), HomeScreen.class);
+                            startActivity(startIntent);
+                        }
                     } else {
-                        currentCAcc = (ConsumerAccount) currentAcc;
-                        Intent startIntent = new Intent(getApplicationContext(), HomeScreen.class);
-                        startActivity(startIntent);
+                        error.setVisibility(View.VISIBLE);
                     }
-               } else {
-                    TextView error = findViewById(R.id.loginCheck);
+                }
+                else {
                     error.setVisibility(View.VISIBLE);
                 }
             }
