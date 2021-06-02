@@ -68,11 +68,11 @@ public class HomeScreen extends AppCompatActivity {
         //result 1
         if(1<=sortedBySearch.size()) {
             currentResult = sortedBySearch.get(0);
-            ImageView pfp = findViewById(R.id.toolbarProfile3);
+            ImageView pfp = findViewById(R.id.toolbarProfile1);
             pfp.setImageDrawable(currentResult.getPFPIMG());
-            TextView businessName = findViewById(R.id.BusinessName3);
+            TextView businessName = findViewById(R.id.BusinessName1);
             businessName.setText(currentResult.getName());
-            TextView addressDisp = findViewById(R.id.addressDisp3);
+            TextView addressDisp = findViewById(R.id.addressDisp1);
             addressDisp.setText(currentResult.getLocation());
             RatingBar stars = findViewById(R.id.ratingBar1);
             stars.setRating((float) currentResult.getRating());
@@ -95,15 +95,15 @@ public class HomeScreen extends AppCompatActivity {
             currentResult = sortedBySearch.get(1);
             ImageView pfp2 = findViewById(R.id.toolbarProfile2);
             pfp2.setImageDrawable(currentResult.getPFPIMG());
-            TextView businessName2 = findViewById(R.id.BusinessName3);
+            TextView businessName2 = findViewById(R.id.BusinessName2);
             businessName2.setText(currentResult.getName());
-            TextView addressDisp2 = findViewById(R.id.addressDisp3);
+            TextView addressDisp2 = findViewById(R.id.addressDisp2);
             addressDisp2.setText(currentResult.getLocation());
-            RatingBar stars2 = findViewById(R.id.ratingBar3);
+            RatingBar stars2 = findViewById(R.id.ratingBar2);
             stars2.setRating((float) currentResult.getRating());
-            TextView categoryDisp2 = findViewById(R.id.categoryDisp3);
+            TextView categoryDisp2 = findViewById(R.id.categoryDisp2);
             categoryDisp2.setText(currentResult.getCategory());
-            Button goToProfile2 = findViewById(R.id.pageBtn3);
+            Button goToProfile2 = findViewById(R.id.pageBtn2);
             goToProfile2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

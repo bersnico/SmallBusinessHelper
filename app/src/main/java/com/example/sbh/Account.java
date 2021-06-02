@@ -7,18 +7,18 @@ import java.util.ArrayList;
 public abstract class Account {
 
 	public static ArrayList<Account> accounts = new ArrayList<Account>();
-	protected static int idNum;
+	public static int idNum = 0;
 	protected String email, password, address;
 	protected boolean isBusiness;
 
-	public Account(String email, String password, String address, int idNumb) {
+	public Account(String email, String password, String address) {
 		this.email=email;
 		this.password=password;
 		this.address=address;
-		idNum = idNumb;
+		idNum ++;
 		accounts.add(this);
 		if(accounts.size()>1){
-			//insertionSort();
+			insertionSort();
 		}
 	}
 
@@ -27,7 +27,7 @@ public abstract class Account {
 		for (int j = 1; j < accounts.size(); j++) {
 			Account current = accounts.get(j);
 			int i = j-1;
-			while ((i > -1) && ((accounts.get(i).getEmail().compareTo(current.getEmail())) == 1)) {
+			while ((i > -1) && ((accounts.get(i).getEmail().compareTo(current.getEmail())) > 0)) {
 				accounts.set(i+1, accounts.get(i));
 				i--;
 			}
@@ -63,4 +63,7 @@ public abstract class Account {
 
 	public abstract String getName();
 
+	public int getId() {
+		return idNum;
+	}
 }
