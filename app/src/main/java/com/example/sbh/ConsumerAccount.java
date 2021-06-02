@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class ConsumerAccount extends Account {
 
-	private ArrayList<BusinessAccount> favs;
+	private ArrayList<BusinessAccount> favs = new ArrayList<BusinessAccount>();
 
 	public ConsumerAccount(String email, String password, String location) {
 		super(email, password, location);

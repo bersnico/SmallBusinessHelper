@@ -15,11 +15,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         if(count == 0){
-            Account acct5 = new BusinessAccount("business1", "daniblobfish9@gmail.com", "passingpasswords", "3 Isaac Sprague Dr, Hingham, MA", "7817498290", "Titles", 2);
-            Account acct3 = new ConsumerAccount("daniellercbrennan@gmail.com", "12345678", "1 Isaac Sprague Dr, Hingham, MA");          Account acct4 = new BusinessAccount("business23456", "nbers@bbns.org", "passingpassword", "34 Butler Dr, Hingham, MA", "4567987890", "NotSure", 3);
-            Account acct6 = new BusinessAccount("business45667", "echin@bbns.org", "wert12345678", "10 Butler Dr, Hingham, MA", "4563747890", "NotSure", 3);
-            Account acct1 = new BusinessAccount("Test", "psegovia04@gmail.com", "hello123", "225 Washington st. ", "6179991108", "Tiles", 2);
-            Account acct2 = new ConsumerAccount("psegovia@bbns.org", "hello1234", "24 randolph road, MI");
+            BusinessAccount acct7 = new BusinessAccount("Metro", "ajinglejangle@gmail.com", "hello123", "35 JFK Drive, Sherborn", "6178773419", "Subs", 2);
+            BusinessAccount acct5 = new BusinessAccount("SqueezeShack", "daniblobfish9@gmail.com", "hello123", "3 Isaac Sprague Dr, Hingham, MA", "7817498290", "Burgers", 2);
+            ConsumerAccount acct3 = new ConsumerAccount("daniellercbrennan@gmail.com", "hello123", "1 Isaac Sprague Dr, Hingham, MA");
+            BusinessAccount acct6 = new BusinessAccount("Checkers", "echin@bbns.org", "hello123", "10 Butler Dr, Hingham, MA", "4563747890", "Pizza", 3);
+            BusinessAccount acct4 = new BusinessAccount("Filling Chicken", "nbers@bbns.org", "hello123", "34 Butler Dr, Hingham, MA", "4567987890", "Chicken", 3);
+            BusinessAccount acct1 = new BusinessAccount("Bob's Burgers", "psegovia04@gmail.com", "hello123", "225 Washington st. ", "6179991108", "Burgers", 1);
+            ConsumerAccount acct2 = new ConsumerAccount("psegovia@bbns.org", "hello123", "24 randolph road, MI");
+            acct2.setFav(acct5);
+            acct2.setFav(acct6);
+            acct2.setFav(acct4);
+            acct2.setFav(acct1);
+            acct2.setFav(acct7);
 
         }
         count++;

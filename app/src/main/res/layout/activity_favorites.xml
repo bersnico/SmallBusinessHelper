@@ -172,7 +172,7 @@
             android:textStyle="bold"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="5dp" app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="684dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="660dp" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="16dp" android:layout_marginStart="16dp" android:layout_marginEnd="174dp"
             android:layout_marginRight="174dp" app:layout_constraintEnd_toEndOf="parent"/>
     <Button

@@ -40,6 +40,8 @@
 
         <activity android:name=".SignUpActivity">
         </activity>
+        <activity android:name=".FavoritesActivity">
+        </activity>
         <activity android:name=".LoginActivity">
         </activity>
         <activity android:name=".MainActivity">

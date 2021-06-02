@@ -9,7 +9,7 @@ import android.widget.SearchView;
 import java.util.ArrayList;
 
 public class HomeScreen extends AppCompatActivity {
-    public static ArrayList<BusinessAccount> sortedBySearch = new ArrayList<>();
+    public static ArrayList<BusinessAccount> sortedBySearch = new ArrayList<BusinessAccount>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,10 +57,6 @@ public class HomeScreen extends AppCompatActivity {
             }
         });
 
-
-
-
-
     }
 
     public void updateDisplayResults(){
@@ -75,9 +71,9 @@ public class HomeScreen extends AppCompatActivity {
             TextView addressDisp = findViewById(R.id.addressDisp1);
             addressDisp.setText(currentResult.getLocation());
             RatingBar stars = findViewById(R.id.ratingBar1);
-            stars.setRating((float) currentResult.getRating());
+            //stars.setRating((float) currentResult.getRating());
             TextView categoryDisp = findViewById(R.id.categoryDisp1);
-            categoryDisp.setText(currentResult.getCategory());
+           // categoryDisp.setText(currentResult.getCategory());
             Button goToProfile1 = findViewById(R.id.pageBtn1);
             goToProfile1.setOnClickListener(new View.OnClickListener() {
                 @Override
