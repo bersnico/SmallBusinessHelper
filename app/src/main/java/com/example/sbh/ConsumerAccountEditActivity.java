@@ -44,9 +44,8 @@ public class ConsumerAccountEditActivity extends AppCompatActivity {
                 String newLocation = nLocation.getText().toString();
 
                 if(checkFilled(newPassword, newLocation)) {
-//                    LoginActivity.currentCAcc.setPassword(newPassword);
-//                    LoginActivity.currentCAcc.setLocation(newLocation);
-
+                    LoginActivity.currentCAcc.setPassword(newPassword);
+                    LoginActivity.currentCAcc.setLocation(newLocation);
                 }
             }
         });

@@ -14,7 +14,6 @@ import java.util.ArrayList;
 
 public class SignUpActivity extends AppCompatActivity {
     private static int checkCount = 0;
-    public static int idCounter = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -90,8 +89,8 @@ public class SignUpActivity extends AppCompatActivity {
                             int priceRangeInt = Integer.parseInt(price.getText().toString());
 
                             if (priceRangeInt > 0 && priceRangeInt < 5) {
-                                LoginActivity.currentBAcc = new BusinessAccount(nameOfBusi, email, initPword, town, phoneNum, category, priceRangeInt, idCounter);
-                                idCounter++;
+                                LoginActivity.currentBAcc = new BusinessAccount(nameOfBusi, email, initPword, town, phoneNum, category, priceRangeInt);
+
 
                                 Intent startIntent = new Intent(getApplicationContext(), BusinessAccountActivity.class);
                                 startActivity(startIntent);
@@ -114,8 +113,8 @@ public class SignUpActivity extends AppCompatActivity {
 
                     }
                     else {
-                        LoginActivity.currentCAcc = new ConsumerAccount(email, initPword, town, idCounter);
-                        idCounter++;
+                        LoginActivity.currentCAcc = new ConsumerAccount(email, initPword, town);
+
                         Intent startIntent = new Intent(getApplicationContext(), HomeScreen.class);
                         startActivity(startIntent);
                     }
