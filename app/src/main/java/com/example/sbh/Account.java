@@ -18,7 +18,7 @@ public abstract class Account {
 		idNum ++;
 		accounts.add(this);
 		if(accounts.size()>1){
-			insertionSort();
+		//	insertionSort();
 		}
 	}
 
