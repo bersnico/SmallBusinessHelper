@@ -16,8 +16,8 @@ public class BusinessAccount extends Account{
 	private double rating;
 	private Drawable pFPIMG;
 
-	public BusinessAccount(String nameOfBusiness, String email, String password, String address, String phoneNumber, String category, int priceRange, int iD) {
-		super(nameOfBusiness, password, address, iD);
+	public BusinessAccount(String nameOfBusiness, String email, String password, String address, String phoneNumber, String category, int priceRange) {
+		super(email, password, address);
 		this.priceRange=priceRange;
 		isBusiness = true;
 		this.category=category;

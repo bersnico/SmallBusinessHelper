@@ -1,11 +1,10 @@
 package com.example.sbh;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.view.View;
-import android.widget.*;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import androidx.appcompat.app.AppCompatActivity;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -16,8 +15,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         if(count == 0){
-            Account acct1 = new BusinessAccount("Test", "psegovia04@gmail.com", "hello123", "225 Washington", "6179991108", "Tiles", 2, 0);
-            Account acct2 = new ConsumerAccount("psegovia@bbns.org", "hello1234", "Mass", 1);
+            Account acct1 = new BusinessAccount("Test", "psegovia04@gmail.com", "hello123", "225 Washington st. ", "6179991108", "Tiles", 2);
+            Account acct2 = new ConsumerAccount("psegovia@bbns.org", "hello1234", "24 randolph road, MI");
+            Account acct3 = new ConsumerAccount("daniellercbrennan@gmail.com", "12345678", "1 Isaac Sprague Dr, Hingham, MA");
+            Account acct4 = new BusinessAccount("business23456", "nbers@bbns.org", "passingpassword", "34 Butler Dr, Hingham, MA", "4567890", "NotSure", 3);
+            Account acct5 = new BusinessAccount("business1", "daniblobfish9@gmail.com", "passingpasswords", "3 Isaac Sprague Dr, Hingham, MA", "7817498290", "Titles", 2);
+            Account acct6 = new BusinessAccount("business45667", "echin@bbns.org", "wert12345678", "10 Butler Dr, Hingham, MA", "4567890", "NotSure", 3);
+
         }
         count++;
         Button logInBtn = findViewById(R.id.login2);

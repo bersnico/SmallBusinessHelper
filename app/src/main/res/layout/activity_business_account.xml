@@ -14,7 +14,8 @@
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.703" android:textSize="18sp"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.436" app:layout_constraintBottom_toTopOf="@+id/textView12"/>
+            app:layout_constraintVertical_bias="0.436" app:layout_constraintBottom_toTopOf="@+id/textView12"
+            android:fontFamily="@font/fenix"/>
     <TextView
             android:text="@string/business_name"
             android:layout_width="154dp"
@@ -22,39 +23,42 @@
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.692" android:textSize="18sp"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.257" app:layout_constraintBottom_toTopOf="@+id/textView12"/>
+            app:layout_constraintVertical_bias="0.257" app:layout_constraintBottom_toTopOf="@+id/textView12"
+            android:fontFamily="@font/fenix"/>
     <TextView
             android:text="@string/favorites"
-            android:layout_width="107dp"
+            android:layout_width="260dp"
             android:layout_height="36dp" android:id="@+id/textView14"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="0.042" android:textSize="24sp"
+            app:layout_constraintHorizontal_bias="0.099" android:textSize="24sp"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.828" app:layout_constraintBottom_toTopOf="@+id/textView12"/>
+            app:layout_constraintVertical_bias="0.827" app:layout_constraintBottom_toTopOf="@+id/textView12"
+            android:fontFamily="@font/fenix"/>
     <TextView
             android:text="@string/category"
-            android:layout_width="107dp"
-            android:layout_height="36dp" android:id="@+id/textView12"
+            android:layout_width="279dp"
+            android:layout_height="39dp" android:id="@+id/textView12"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="0.042" android:textSize="24sp"
+            app:layout_constraintHorizontal_bias="0.128" android:textSize="24sp"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0.588"/>
+            app:layout_constraintVertical_bias="0.588" android:fontFamily="@font/fenix"/>
     <TextView
             android:text="@string/location"
-            android:layout_width="107dp"
-            android:layout_height="36dp" android:id="@+id/textView15"
+            android:layout_width="278dp"
+            android:layout_height="61dp" android:id="@+id/textView15"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="0.052" android:textSize="24sp"
+            app:layout_constraintHorizontal_bias="0.136" android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0.064" app:layout_constraintTop_toBottomOf="@+id/textView12"/>
+            app:layout_constraintVertical_bias="0.053" app:layout_constraintTop_toBottomOf="@+id/textView12"
+            android:fontFamily="@font/fenix"/>
     <TextView
             android:text="@string/price"
-            android:layout_width="107dp"
-            android:layout_height="36dp" android:id="@+id/textView11"
+            android:layout_width="277dp"
+            android:layout_height="34dp" android:id="@+id/textView11"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="0.042" android:textSize="24sp"
-            app:layout_constraintVertical_bias="0.464" app:layout_constraintBottom_toTopOf="@+id/textView12"
-            app:layout_constraintTop_toBottomOf="@+id/textView14"/>
+            app:layout_constraintHorizontal_bias="0.122" android:textSize="24sp"
+            app:layout_constraintVertical_bias="0.533" app:layout_constraintBottom_toTopOf="@+id/textView12"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" android:fontFamily="@font/fenix"/>
     <TextView
             android:text="@string/your_account"
             android:layout_width="221dp"
@@ -72,14 +76,13 @@
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintVertical_bias="0.342"/>
     <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" tools:src="@tools:sample/avatars" android:id="@+id/imageView"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="84dp" app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="519dp" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="16dp" android:layout_marginStart="16dp" android:layout_marginEnd="267dp"
-            android:layout_marginRight="267dp" app:layout_constraintEnd_toEndOf="parent"
-            android:contentDescription="@string/profilepic"/>
+            android:layout_width="150dp"
+            android:layout_height="150dp" tools:src="@tools:sample/avatars" android:id="@+id/imageView"
+            android:contentDescription="@string/profilepic"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toStartOf="@+id/textView6"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" android:layout_marginTop="12dp"
+            app:layout_constraintHorizontal_bias="0.54" app:layout_constraintBottom_toTopOf="@+id/ratingBar3"
+            app:layout_constraintVertical_bias="0.093" android:scaleType="fitXY"/>
     <Button
             android:text="@string/edit_profile"
             android:layout_width="wrap_content"
@@ -89,26 +92,7 @@
             android:layout_marginBottom="16dp" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="145dp" android:layout_marginStart="145dp" android:layout_marginEnd="146dp"
             android:layout_marginRight="146dp" app:layout_constraintEnd_toEndOf="parent"
-            android:textColorLink="#FFFFFF"/>
-    <ImageView
-            android:layout_width="169dp"
-            android:layout_height="213dp" tools:srcCompat="@tools:sample/backgrounds/scenic"
-            android:id="@+id/imageView2" app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="473dp" app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="45dp" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="16dp" android:layout_marginStart="16dp" android:layout_marginEnd="226dp"
-            android:layout_marginRight="226dp" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.0"
-            android:contentDescription="@string/uploaded1"/>
-    <ImageView
-            android:layout_width="169dp"
-            android:layout_height="213dp" tools:srcCompat="@tools:sample/backgrounds/scenic"
-            android:id="@+id/imageView4" app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="473dp" app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="45dp" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="217dp" android:layout_marginStart="217dp" android:layout_marginEnd="25dp"
-            android:layout_marginRight="25dp" app:layout_constraintEnd_toEndOf="parent"
-            android:contentDescription="@string/uploaded2"/>
+            android:textColorLink="#FFFFFF" android:fontFamily="@font/fenix"/>
     <Button
             android:text="@string/log_out"
             android:layout_width="wrap_content"
@@ -117,5 +101,6 @@
             android:layout_marginTop="16dp" app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginBottom="667dp" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="296dp" android:layout_marginStart="296dp" android:layout_marginEnd="25dp"
-            android:layout_marginRight="25dp" app:layout_constraintEnd_toEndOf="parent"/>
+            android:layout_marginRight="25dp" app:layout_constraintEnd_toEndOf="parent"
+            android:fontFamily="@font/fenix"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

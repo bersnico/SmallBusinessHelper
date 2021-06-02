@@ -70,4 +70,6 @@
     <string name="show_search_results_on_map">Show Search Results on Map</string>
     <string name="favorited_by">Favorited by:</string>
     <string name="return_to_home">Return To Home</string>
+    <string name="timesFavs">\"Number of Times Favorited: \"</string>
+    <string name="priceR">\"Price: \"</string>
 </resources>
