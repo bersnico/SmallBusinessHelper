@@ -39,7 +39,7 @@ public class BusinessAccountEditActivity extends AppCompatActivity {
 
         TextView cPrice = findViewById(R.id.editprice);
         String currPrice = LoginActivity.currentBAcc.getPriceRange() + "";
-        cPrice.setText(currBName);
+        cPrice.setText(currPrice);
 
         TextView cCat = findViewById(R.id.editCat);
         String currCat = LoginActivity.currentBAcc.getCategory();
@@ -48,6 +48,8 @@ public class BusinessAccountEditActivity extends AppCompatActivity {
         TextView cLoc = findViewById(R.id.editLoc);
         String currLoc = LoginActivity.currentBAcc.getLocation();
         cLoc.setText(currLoc);
+        ImageView pfp = findViewById(R.id.imageView3);
+        pfp.setImageDrawable(LoginActivity.currentBAcc.getPFPIMG());
 
         Button addImg = findViewById(R.id.addImagesBtn);
         addImg.setOnClickListener(new View.OnClickListener() {
@@ -72,6 +74,8 @@ public class BusinessAccountEditActivity extends AppCompatActivity {
                 String newP = newPrice.getText().toString();
                 EditText newCat = findViewById(R.id.editCat);
                 String newCate =newCat.getText().toString();
+                ImageView newPFP = findViewById(R.id.imageView3);
+                Drawable newPFPDr = newPFP.getDrawable();
                 if(checkFilled(newB, newNum, newLoc, newP, newCate)){
                     LoginActivity.currentBAcc.setBusinessName(newB);
                     LoginActivity.currentBAcc.setPhoneNumber(newNum);
@@ -79,6 +83,7 @@ public class BusinessAccountEditActivity extends AppCompatActivity {
                     int nP = Integer.parseInt(newP);
                     LoginActivity.currentBAcc.setPriceRange(nP);
                     LoginActivity.currentBAcc.setCategory(newCate);
+                    LoginActivity.currentBAcc.setPFP(newPFPDr);
                     Intent startIntent = new Intent(getApplicationContext(), BusinessAccountActivity.class);
                     startActivity(startIntent);
                 }

@@ -1,8 +1,10 @@
 package com.example.sbh;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,11 +29,11 @@ public class BusinessAccountActivity extends AppCompatActivity {
         String currPhone = LoginActivity.currentBAcc.getNumber();
         cPhone.setText(currPhone);
 
-        TextView cFavorites = findViewById(R.id.textView14);
+        TextView cFavorites = findViewById(R.id.textView13);
         int currFav = LoginActivity.currentBAcc.getNumFavorites();
-        cFavorites.setText(new StringBuilder().append(getString(R.string.timesFavs)).append(String.valueOf(currFav)).toString());
+        cFavorites.setText(String.valueOf(currFav));
 
-        TextView cPrice = findViewById(R.id.textView11);
+        TextView cPrice = findViewById(R.id.textView16);
         int currPrice = LoginActivity.currentBAcc.getPriceRange();
         String cPriceR ="";
         if(currPrice==1){
@@ -43,10 +45,10 @@ public class BusinessAccountActivity extends AppCompatActivity {
         if(currPrice==3){
             cPriceR="$$$";
         }
-        if(currPrice>=3){
+        if(currPrice>3){
             cPriceR="$$$$";
         }
-        cPrice.setText(new StringBuilder().append(getString(R.string.priceR)).append(cPriceR).toString());
+        cPrice.setText(cPriceR);
 
         TextView cCat = findViewById(R.id.textView12);
         String currCat = LoginActivity.currentBAcc.getCategory();
@@ -56,6 +58,9 @@ public class BusinessAccountActivity extends AppCompatActivity {
         String currLoc = LoginActivity.currentBAcc.getLocation();
         cLoc.setText(currLoc);
 
+        ImageView currPFP = findViewById(R.id.imageView);
+        Drawable currPFPDr = LoginActivity.currentBAcc.getPFPIMG();
+        currPFP.setImageDrawable(currPFPDr);
 
         Button edit = findViewById(R.id.edit);
         edit.setOnClickListener(new View.OnClickListener() {

@@ -21,10 +21,11 @@
     <string name="your_account">Your Account</string>
     <string name="emailDisplay">Email:</string>
     <string name="enter_a_category">Enter a category</string>
-    <string name="enter_price_range_1_4">Enter Price Range(1-4)</string>
+    <string name="enter_price_range_1_4">Enter Price Range(1–4)</string>
     <string name="location">Location</string>
     <string name="edit_profile">Edit Profile</string>
     <string name="favorites">Favorites</string>
+    <string name="favss">Favorites:</string>
     <string name="price">Price</string>
     <string name="category">Category</string>
     <string name="business_name">Business Name</string>
@@ -70,6 +71,6 @@
     <string name="show_search_results_on_map">Show Search Results on Map</string>
     <string name="favorited_by">Favorited by:</string>
     <string name="return_to_home">Return To Home</string>
-    <string name="timesFavs">\"Number of Times Favorited: \"</string>
-    <string name="priceR">\"Price: \"</string>
+    <string name="timesFavs">Number of Times Favorited: </string>
+    <string name="priceR">Price: </string>
 </resources>
