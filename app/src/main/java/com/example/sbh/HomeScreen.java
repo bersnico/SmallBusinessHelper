@@ -46,14 +46,14 @@ public class HomeScreen extends AppCompatActivity {
             public boolean onQueryTextSubmit(String query) {
                 updateSearches(query);
                 updateDisplayResults();
-                return false;
+                return true;
             }
 
             @Override
             public boolean onQueryTextChange(String newText) {
                 updateSearches(newText);
                 updateDisplayResults();
-                return false;
+                return true;
             }
         });
 

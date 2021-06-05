@@ -57,7 +57,8 @@ public class BusinessPageActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(checkBox.isChecked()){
                     LoginActivity.currentBAcc.incrementNumFavorites(1);
-                }
+                    LoginActivity.currentCAcc.setFav(LoginActivity.currentBAcc);
+;                }
             }
         });
         Button returnToSearch = findViewById(R.id.returnToSearch);

@@ -33,6 +33,7 @@ public class BusinessAccount extends Account{
 		this.phoneNumber = this.phoneNumber + "-" + temp;
 		rating = 0;
 		ratings = new ArrayList<Double>();
+		ratings.add(0.0);
 		numFavorites=0;
 		businessAccounts.add(this);
 	}
